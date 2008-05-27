@@ -11,6 +11,14 @@ div#leftbar
   height:100%;
 }
 
+div#menu
+{
+
+  margin-left:10px;
+  margin-right:10px;
+  margin-top:40px;
+}
+
 div#main
 {
   float:right;
