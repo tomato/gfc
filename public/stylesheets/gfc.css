@@ -21,8 +21,7 @@ div#main
 div#selectionbox
 {
   margin:40px;
-  width:100%;
-  height:100%;
+  text-align:center;
 }
 div
 {
