@@ -1,6 +1,6 @@
 h1
 {
-  text-align:center;
+  text-align:left;
   margin:30px;
 }
 
@@ -8,7 +8,6 @@ div#leftbar
 {
   float:left;
   width:15%;
-  height:100%;
 }
 
 div#menu
@@ -17,6 +16,7 @@ div#menu
   margin-left:10px;
   margin-right:10px;
   margin-top:40px;
+  text-align:center;
 }
 
 div#main
@@ -28,12 +28,18 @@ div#main
 
 div#selectionbox
 {
-  margin:40px;
+  margin:20px;
   text-align:center;
 }
-div
+
+div#selectionbox img
 {
-  border-width:1px;
-  border-color:black;
-  border-style:solid;
+  margin:0px;
+  padding:0px;
+  border:0px;
+}
+div#menu img
+
+{
+  margin:5px;
 }
