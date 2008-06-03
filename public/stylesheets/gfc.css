@@ -1,3 +1,7 @@
+*
+{
+  font-family:Georgia;
+}
 h1
 {
   text-align:center;
@@ -19,6 +23,11 @@ div#menu
   text-align:center;
 }
 
+div#menu img
+{
+  margin:5px;
+}
+
 div#main
 {
   float:right;
@@ -30,6 +39,7 @@ div#selectionbox
 {
   margin:20px;
   text-align:center;
+  position:relative;
 }
 
 div#selectionbox img
@@ -38,8 +48,62 @@ div#selectionbox img
   padding:0px;
   border:0px;
 }
-div#menu img
 
+div#selectionbox > div.SelectionImage
 {
-  margin:5px;
+  z-index:2;
+  width:240;
+  height:160;
+  float:left;
 }
+
+div#selectionbox > div.SelectionText
+{
+  width:200;
+  height:120;
+  z-index:1;
+  padding:20px;
+  float:left;
+}
+
+div#selectionbox > div.Cell1
+{
+  position:absolute;
+  top:0px;
+  left:0px;
+}
+
+div#selectionbox > div.Cell2
+{
+  position:absolute;
+  top:0px;
+  left:240px;
+}
+
+div#selectionbox > div.Cell3
+{
+  position:absolute;
+  top:0px;
+  left:480px;
+}
+
+div#selectionbox > div.Cell4
+{
+  position:absolute;
+  top:160px;
+  left:0px;
+}
+
+div#selectionbox > div.Cell5
+{
+  position:absolute;
+  top:160px;
+  left:240px;
+}
+div#selectionbox > div.Cell6
+{
+  position:absolute;
+  top:160px;
+  left:480px;
+}
+
