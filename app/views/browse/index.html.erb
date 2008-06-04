@@ -11,6 +11,9 @@
   </div>
 </div>
 <div id="main">
+  <% for producer in @producers -%>
+    <%= producer.summary %>
+  <% end -%> 
   <div id="selectionbox">
     <div class="SelectionImage Cell1" >
       <%= image_tag("bread.jpg", :size => "240x160") %>
