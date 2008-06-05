@@ -1,0 +1,80 @@
+
+
+#  create_table "producer_images", :force => true do |t|
+#    t.integer  "producer_id",                     :null => false
+#    t.integer  "sequence",                        :null => false
+#    t.string   "alt_text",    :default => "NULL"
+#    t.string   "name",        :default => "NULL"
+bread:
+  producer: baker
+  sequence: 1
+  alt_text: Very yummy bread
+  name: bread.jpg
+  
+field:
+  producer: veg
+  sequence: 1
+  alt_text: Big Field full of veg
+  name: field.jpg
+
+onions:
+  producer: veg
+  sequence: 2
+  alt_text: Onions hungion
+  name: onions.jpg
+spinnach:
+  producer: veg
+  sequence: 3
+  alt_text: Spinnach is very good
+  name: spinnach.jpg
+
+weirdveg:
+  producer: veg
+  sequence: 4
+  alt_text: I should know what this is
+  name: weirdveg.jpg
+
+calf:
+  producer: jimmy
+  sequence: 1
+  alt_text: very cute calfs
+  name: calf.jpg
+
+moremixedveg:
+  producer: veg
+  sequence: 1
+  alt_text: box like this could be yours
+  name: moremixedveg.jpg
+
+pigs:
+  producer: jimmy
+  sequence: 2
+  alt_text: Rare breed yumminess
+  name: pigs.jpg
+
+eggs:
+  producer: egg
+  sequence: 1
+  alt_text: Eggs from extatic chickens
+  name: eggs.jpg
+
+lettuce:
+  producer: salad
+  sequence: 1
+  alt_text: Fresh leaves are not dull
+  name: lettuce.jpg
+
+mushroom:
+  producer: mushroom
+  sequence: 1
+  alt_text: Hard to find
+  name: mushroom.jpg
+
+vegbox:
+  producer: veg
+  sequence: 1
+  alt_text: Picked the day before delivery
+  name: vegbox.jpg
+  
+
+

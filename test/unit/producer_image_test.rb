@@ -1,12 +1,8 @@
 require File.dirname(__FILE__) + '/../test_helper'
 
-class ProducerTest < ActiveSupport::TestCase
+class ProducerImageTest < ActiveSupport::TestCase
   # Replace this with your real tests.
   def test_truth
     assert true
-  end
-
-  def test_images
-
   end
 end

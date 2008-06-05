@@ -9,7 +9,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 2) do
+ActiveRecord::Schema.define(:version => 3) do
+
+  create_table "producer_images", :force => true do |t|
+    t.integer  "producer_id",                     :null => false
+    t.integer  "sequence",                        :null => false
+    t.string   "alt_text",    :default => "NULL"
+    t.string   "name",        :default => "NULL"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "producers", :force => true do |t|
     t.string   "name",       :null => false
