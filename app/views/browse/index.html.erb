@@ -11,47 +11,16 @@
   </div>
 </div>
 <div id="main">
-  <% for producer in @producers -%>
-    <%= producer.summary %>
-  <% end -%> 
   <div id="selectionbox">
-    <div class="SelectionImage Cell1" >
-      <%= image_tag("bread.jpg", :size => "240x160") %>
+    <% 6.times do |i| 
+    producer = @producers[i] 
+    cell_class = "Cell" + (i+1).to_s -%>
+    <div class="SelectionImage <%=cell_class %>" >
+      <%= image_tag(producer.main_image.name, :size => "240x160") %>
     </div>
-    <div class="SelectionText Cell1">
-      CollingWood Master bakers bake using traditional recipes using local grain
+    <div class="SelectionText <%=cell_class %>">
+      <b><%= producer.name %></b><br/><%= producer.summary %>
     </div> 
-    <div class="SelectionImage Cell2">
-      <%= image_tag("eggs.jpg", :size => "240x160") %>
-    </div> 
-    <div class="SelectionText Cell2">
-      Janes Barn love their chickens and their eggs taste amazing
-    </div> 
-    <div class="SelectionImage Cell3">
-      <%= image_tag("lettuce.jpg", :size => "240x160") %>
-    </div> 
-    <div class="SelectionText Cell3">
-      Mill Farm specialise in producing the ingredients for the finest salads
-    </div> 
-    <div class="SelectionImage Cell4">
-       <%= image_tag("mushroom.jpg", :size => "240x160") %>
-    </div> 
-    <div class="SelectionText Cell4">
-      Marvins Mushroom know where to find amazing wild mushrooms
-    </div> 
-    <div class="SelectionImage Cell5">
-       <%= image_tag("pigs.jpg", :size => "240x160") %>
-    </div> 
-    <div class="SelectionText Cell5">
-      Padstow Farm keep rare breed pigs
-    </div> 
-    <div class="SelectionImage Cell6">
-       <%= image_tag("spinnach.jpg", :size => "240x160") %>
-     </div>
-    <div class="SelectionText Cell6">
-      Tasty Veggies love veg and grow some of the best in the UK
-    </div> 
+    <% end -%>
   </div>
-
 </div>
-
