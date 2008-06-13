@@ -12,10 +12,10 @@
 ActiveRecord::Schema.define(:version => 3) do
 
   create_table "producer_images", :force => true do |t|
-    t.integer  "producer_id",                     :null => false
-    t.integer  "sequence",                        :null => false
-    t.string   "alt_text",    :default => "NULL"
-    t.string   "name",        :default => "NULL"
+    t.integer  "producer_id",                       :null => false
+    t.integer  "sequence",                          :null => false
+    t.string   "alt_text",    :default => "'NULL'"
+    t.string   "name",        :default => "'NULL'"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

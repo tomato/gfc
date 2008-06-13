@@ -12,11 +12,12 @@
 </div>
 <div id="main">
   <div id="selectionbox">
-    <% 6.times do |i| 
-    producer = @producers[i] 
-    cell_class = "Cell" + (i+1).to_s -%>
+    <% i=0
+    for producer in @producers
+    cell_class = "Cell" + (i+=1).to_s -%>
     <div class="SelectionImage <%=cell_class %>" >
-      <%= image_tag(producer.main_image.name, :size => "240x160") %>
+      <%= link_to(image_tag(producer.main_image.name, :size => "240x160"),
+      :action => 'view', :id => producer.id) %>
     </div>
     <div class="SelectionText <%=cell_class %>">
       <b><%= producer.name %></b><br/><%= producer.summary %>

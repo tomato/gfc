@@ -1,7 +1,7 @@
 $(document).ready(function(){
   $(".SelectionImage")
     .hover(
-      function(){ $(this).children("img").fadeOut('slow');},
-      function(){ $(this).children("img").fadeIn('slow');}
+      function(){ $(this).children("*").children("img").fadeTo('slow', 0.3);},
+      function(){ $(this).children("*").children("img").fadeTo('slow', 1);}
     )
 })
