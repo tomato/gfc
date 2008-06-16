@@ -1,2 +1,19 @@
-Add unit tests to deal with producer or image missing:w
-:
+what => What the produce how its produced
+who => who is involved (personatlities, nicknames), how long, 
+where => where its made, how big, where do ingredients come from 
+when => seasonal availability, delvery times
+
+options - 
+	move image to main producer table 
+	create new table for sections with section type and image (polymorphic?)
+		producer_id
+		section_type
+		text
+		image
+UI
+	options
+		layout alternate sections 
+		hover over image to show text div opaque to allow navigation to other images
+
+Future considerations
+	Need to put the sale itmes in somewhere (below)

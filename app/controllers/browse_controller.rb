@@ -5,6 +5,6 @@ class BrowseController < ApplicationController
   end
 
   def view
-   # @producer = Producer.find(:id)
+    @producer = Producer.find(params[:id])
   end
 end
