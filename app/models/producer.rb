@@ -1,4 +1,5 @@
 class Producer < ActiveRecord::Base
+  has_many :producer_sections
   
   def not_null_image
     image || 'noimage.jpg'

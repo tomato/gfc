@@ -1,0 +1,29 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+    #create_table :producer_sections do |t|
+    #  t.integer :producer_id, :null => false
+    ##  t.string :name, :summary, :image, :null => false
+    #  t.timestamps
+
+# one:
+#   column: value
+#
+# two:
+#   column: value
+
+jimmy_who:
+  producer: jimmy
+  name: Who is Jimmy?
+  summary: Jimmy is long time friend of Jamie Oliver who started his own rare breed pig farm in Suffolk. Jimmy works with his partner and a small team of helpers.
+  image:
+
+jimmy_where: 
+  producer: jimmy
+  name: Where is Jimmys farm?
+  summary: Jimmys farm is near Ipswich. It is a great day out if you fancy a visit. You can taste Jimmys produce and see exactly how it is made. There is also a nature trail through a fantastic wood and plenty of things for the kids to do.
+  image: calf.jpg
+
+jimmy_what:
+  producer: jimmy  
+  name: What does jimmy produce?
+  summary: Jimmys speciality is pork from rare breed pigs but he also produces his own beef and lamb.
+  image: pigs.jpg

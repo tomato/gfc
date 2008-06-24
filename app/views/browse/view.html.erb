@@ -1,1 +1,12 @@
-<p><%= @producer.summary %></p>
+<% i=0
+for p in @producer.producer_sections 
+i+=1  
+c = (i%2)+1 %>
+<div class="ProducerSection<%=c%>">
+    <%= image_tag p.not_null_image %>
+    <div class="ProducerSectionText">
+      <h3><%= h(p.name) %></h3>
+      <br><%= h(p.summary) %>
+    </div>
+  </div>
+<% end %>

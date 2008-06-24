@@ -8,6 +8,18 @@ h1
   margin:20px;
 }
 
+h2
+{
+  text-align:center;
+  margin:10px;
+}
+
+h3
+{
+  text-align:center;
+  margin:5px;
+}
+
 div#leftbar
 {
   float:left;
@@ -20,7 +32,6 @@ div#menu
   margin-left:10px;
   margin-right:10px;
   margin-top:40px;
-  text-align:center;
 }
 
 div#menu img
@@ -107,3 +118,27 @@ div#selectionbox > div.Cell6
   left:480px;
 }
 
+div.ProducerSection1, div.ProducerSection2
+{
+  float: none;
+  clear: both;
+}
+
+div.ProducerSection1  img
+{
+  float: left;
+  margin-right: 20px;
+}
+
+div.ProducerSection2  img
+{
+  float: right;
+  margin-left: 20px;
+}
+
+div.ProducerSectiontext
+{
+  padding: 20px;
+  text-align: center;
+  vertical-align: middle;
+}
