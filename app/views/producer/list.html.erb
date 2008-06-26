@@ -1,0 +1,32 @@
+<h2>Producer list</h2> <table>
+  <tr>
+    <th>
+      id
+    </th>
+    <th>
+      name
+    </th>
+    <th>
+      created
+    </th>
+    <th>
+      updated
+    </th>
+  </tr>
+<% for producer in @producers %>
+  <tr>
+    <td>
+      <%= link_to  producer.id, {:action => "edit", :id => producer.id} %>
+    </td>
+    <td>
+      <%= producer.name %>
+    </td>
+    <td>
+      <%= producer.created_at.to_s(:long) %>
+    </td>
+    <td>
+      <%= producer.updated_at.to_s(:long) %>
+    </td>
+  </tr>
+<% end %>
+
