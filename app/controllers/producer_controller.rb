@@ -6,5 +6,7 @@ class ProducerController < ApplicationController
 
   def edit
     @producer = Producer.find(params[:id])
+    @producer.update_attributes(params[:producer]) if(params[:producer])
+    flash[:notice] = "You've been updated"
   end
 end

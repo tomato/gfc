@@ -1,2 +1,13 @@
-<h1>Producer#edit</h1>
-<p>Find me in app/views/producer/edit.html.erb</p>
+<% form_for :producer , :html => { :multipart => true } do |form| %>
+<table>
+  <tr>
+    <td>Name:</td><td> <%= form.text_field :name %></td>
+  </tr><tr>
+    <td>Summary:</td><td> <%= form.text_area :summary, :rows => 3 %></td>
+    </tr><tr>
+      <td>Upload a pic that shows you and some of the things you produce:</td>
+      <td> <%= form.file_field :uploaded_image %><%= image_tag @producer.image %></td>
+    </tr>
+</table>
+  <%= submit_tag %>
+<% end %>
