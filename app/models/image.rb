@@ -1,4 +1,5 @@
 class Image < ActiveRecord::Base
+  belongs_to :section , :polymorphic => true
 
   validates_format_of :content_type,
                       :with => /^image/,

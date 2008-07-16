@@ -6,19 +6,18 @@ class AddImages < ActiveRecord::Migration
     create_table :images do |t|
       t.column :content_type, :string
       t.column :data, :binary, :limit => 1.megabyte
+      t.references :section, :polymorphic => true
     end
 
-    add_column :producers, :image_id, :integer
     remove_column :producers, :image
-    add_column :producer_sections, :image_id, :integer
     remove_column :producer_sections, :image
   end
 
   def self.down
     drop_table :images
-    remove_column :producers, :image_id
     add_column :producers, :image, :string
-    remove_column :producer_sections, :image_id
     add_column :producer_sections, :image, :string
+    remove_column :producers, :image_id
+    remove_column :producer_sections, :image_id
   end
 end

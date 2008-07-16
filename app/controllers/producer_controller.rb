@@ -1,4 +1,5 @@
 class ProducerController < ApplicationController
+  helper :image
 
   def list
     @producers = Producer.find(:all)

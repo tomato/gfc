@@ -1,9 +1,9 @@
 class Producer < ActiveRecord::Base
   has_many :producer_sections
-  belongs_to :image
+  has_one :image, :as => :section
   
   def not_null_image
-    image || 'noimage.jpg'
+    image || Image.new[:id => 1]
   end
 
   def Producer.get(num)
@@ -13,6 +13,7 @@ class Producer < ActiveRecord::Base
   def uploaded_image=(image_field)
     i = Image.new
     i.uploaded_picture = image_field
+    self.image = i
   end
 
 end

@@ -12,8 +12,10 @@
 ActiveRecord::Schema.define(:version => 6) do
 
   create_table "images", :force => true do |t|
-    t.string "content_type"
-    t.binary "data"
+    t.string  "content_type"
+    t.binary  "data"
+    t.integer "section_id"
+    t.string  "section_type"
   end
 
   create_table "producer_sections", :force => true do |t|
@@ -22,7 +24,6 @@ ActiveRecord::Schema.define(:version => 6) do
     t.string   "summary",     :default => "", :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "image_id"
   end
 
   create_table "producers", :force => true do |t|
@@ -30,7 +31,6 @@ ActiveRecord::Schema.define(:version => 6) do
     t.string   "summary",    :default => "", :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "image_id"
   end
 
 end

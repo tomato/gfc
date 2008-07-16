@@ -2,29 +2,29 @@
 jimmy:
   name: Jimmys Farm
   summary: Breeds rare breed pigs and minor celebraties
-  image: pigs.jpg
+  
 
 mushroom:
   name: Janes Forest shrooms 
   summary: Her squad of hippys find the finest forest fare
-  image: mushroom.jpg
+  
 
 baker:
   name: Clopton Farm Bakery
   summary: Bakes amazing breads, cakes and Pies
-  image: bread.jpg
+  
 
 veg:
   name: Staunton Vegetables
   summary: Grow unusual vegetables and supply the finest restaurents
-  image: vegbox.jpg
+  
 
 egg:
   name: Harrys Hen House
   summary: Sells all types of eggs from their free range hens
-  image: eggs.jpg
+  
 
 salad:
   name: Lovely Leaves
   summary: Sell everything you need for an amazing or unusual salad
-  image: lettuce.jpg
+  

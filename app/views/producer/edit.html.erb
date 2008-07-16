@@ -6,7 +6,10 @@
     <td>Summary:</td><td> <%= form.text_area :summary, :rows => 3 %></td>
     </tr><tr>
       <td>Upload a pic that shows you and some of the things you produce:</td>
-      <td> <%= form.file_field :uploaded_image %><%= image_tag @producer.image %></td>
+      <td> 
+        <%= form.file_field :uploaded_image %>
+        <%= gfc_image_tag @producer.image, @producer.name %>
+      </td>
     </tr>
 </table>
   <%= submit_tag %>
