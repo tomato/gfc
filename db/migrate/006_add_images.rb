@@ -7,8 +7,11 @@ class AddImages < ActiveRecord::Migration
       t.column :content_type, :string
       t.column :data, :binary, :limit => 1.megabyte
       t.references :section, :polymorphic => true
+      
     end
 
+    Image.create :content_type => "image/jpeg", :data => IO.read("#{RAILS_ROOT}/public/images/noimage.jpg")
+    
     remove_column :producers, :image
     remove_column :producer_sections, :image
   end
@@ -17,7 +20,5 @@ class AddImages < ActiveRecord::Migration
     drop_table :images
     add_column :producers, :image, :string
     add_column :producer_sections, :image, :string
-    remove_column :producers, :image_id
-    remove_column :producer_sections, :image_id
   end
 end

@@ -8,7 +8,7 @@
       <td>Upload a pic that shows you and some of the things you produce:</td>
       <td> 
         <%= form.file_field :uploaded_image %>
-        <%= gfc_image_tag @producer.image, @producer.name %>
+        <%= gfc_image_tag @producer.not_null_image, @producer.name %>
       </td>
     </tr>
 </table>
