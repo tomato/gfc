@@ -1,7 +1,11 @@
 module ImageHelpers
 
   def not_null_image
-    image || Image.find(1)
+    if(image)
+      image.public_filename
+    else
+      'noimage.jpg'
+    end
   end
 
 end

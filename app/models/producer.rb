@@ -1,4 +1,4 @@
-require "image_helpers"
+require 'image_helpers'
 
 class Producer < ActiveRecord::Base
   has_many :producer_sections
@@ -7,12 +7,6 @@ class Producer < ActiveRecord::Base
   
   def Producer.get(num)
     Producer.find(:all, :limit => num)
-  end
-
-  def uploaded_image=(image_field)
-    i = Image.new
-    i.uploaded_picture = image_field
-    self.image = i
   end
 
 end

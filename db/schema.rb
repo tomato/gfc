@@ -12,8 +12,11 @@
 ActiveRecord::Schema.define(:version => 6) do
 
   create_table "images", :force => true do |t|
+    t.integer "size"
     t.string  "content_type"
-    t.binary  "data"
+    t.string  "filename"
+    t.integer "height"
+    t.integer "width"
     t.integer "section_id"
     t.string  "section_type"
   end

@@ -5,3 +5,4 @@ doc/app
 log/*.log
 tmp/**/*
 *.swp
+public/images/producer/*

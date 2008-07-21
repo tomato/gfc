@@ -1,13 +1,10 @@
 class Image < ActiveRecord::Base
   belongs_to :section , :polymorphic => true
+  has_attachment  :content_type => :image ,
+                  :storage => :file_system ,
+                  :max_size => 1000.kilobytes , 
+                  :resize_to => [240,160],
+                  :path_prefix => 'public/images/producer'
+  validates_as_attachment  
 
-  validates_format_of :content_type,
-                      :with => /^image/,
-                      :message => " You can only upload pictures "
-  
-
-  def uploaded_picture=(uploaded_image)
-    self.content_type = uploaded_image.content_type.chomp
-    self.data = uploaded_image.read
-  end
 end
