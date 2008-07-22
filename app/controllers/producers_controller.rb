@@ -9,10 +9,6 @@ class ProducersController < ApplicationController
     @producer = Producer.find(params[:id])
   end
 
-  def list
-    @producers = Producer.find(:all)
-  end
-
   def new
 
   end
