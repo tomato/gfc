@@ -1,0 +1,6 @@
+#! /bin/bash
+sudo /usr/bin/mysqld_safe &
+script/server
+
+
+
