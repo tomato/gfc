@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 6) do
+ActiveRecord::Schema.define(:version => 7) do
 
   create_table "images", :force => true do |t|
     t.integer "size"
@@ -30,10 +30,14 @@ ActiveRecord::Schema.define(:version => 6) do
   end
 
   create_table "producers", :force => true do |t|
-    t.string   "name",       :default => "", :null => false
-    t.string   "summary",    :default => "", :null => false
+    t.string   "name",                      :default => "", :null => false
+    t.string   "summary",                   :default => "", :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "address",    :limit => 500
+    t.string   "website"
+    t.string   "email"
+    t.string   "tel"
   end
 
 end

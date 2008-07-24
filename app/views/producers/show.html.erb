@@ -1,8 +1,11 @@
-<% i=0
-for p in @producer.producer_sections 
-i+=1  
-c = (i%2)+1 %>
-<div class="ProducerSection<%=c%>">
+<div>
+  <h2><%= @producer.name %></h2>
+  <%= image_tag @producer.not_null_image %>
+  <%= @producer.summary %>
+</div>
+
+<% i=0; for p in @producer.producer_sections %>
+<div class="ProducerSection<%=c i+=1%>">
     <%= image_tag p.not_null_image %>
     <div class="ProducerSectionText">
       <h3><%= h(p.name) %></h3>
@@ -10,3 +13,10 @@ c = (i%2)+1 %>
     </div>
   </div>
 <% end %>
+
+<div>
+  <%= @producer.address %><br>
+  <%= @producer.website %><br>
+  <%= @producer.email %><br>
+  <%= @producer.tel %><br>
+</div>

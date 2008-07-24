@@ -1,5 +1,4 @@
 class ProducersController < ApplicationController
-  helper :image
 
   def index
     @producers = Producer.get(6)

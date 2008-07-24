@@ -4,12 +4,24 @@
     <td>Name:</td><td> <%= form.text_field :name %></td>
   </tr><tr>
     <td>Summary:</td><td> <%= form.text_area :summary, :rows => 3 %></td>
-    </tr><tr>
-      <td>Upload a pic that shows you and some of the things you produce:</td>
-      <td> 
-        <%= file_field :image, :uploaded_data %>
-        <%= image_tag @producer.not_null_image %>
-      </td>
+  </tr><tr>
+    <td>Address:</td><td> <%= form.text_area :address, :rows => 6 %></td>
+  </tr><tr>
+    <td>Website URL if you've got one:</td><td> <%= form.text_field :website %></td>
+  </tr><tr>
+    <td>Email address</td><td> <%= form.text_field :email %></td>
+  </tr><tr>
+    <td>Telephone Number</td><td> <%= form.text_field :tel %></td>
+  </tr><tr>
+  <% if(@producer.image) %>
+    <td colspan=2><%= image_tag @producer.not_null_image %></td>
+  </tr><tr>
+    <td>Change your main image here:</td>
+    <td><%= file_field :image, :uploaded_data %></td>
+  <% else %>
+    <td>Upload the main pic that shows you and some of the things you produce:</td>
+    <td><%= file_field :image, :uploaded_data %></td>
+  <% end %>
     </tr>
 </table>
   <%= submit_tag %>
