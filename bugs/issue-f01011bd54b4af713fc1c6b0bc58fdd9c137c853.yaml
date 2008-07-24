@@ -1,0 +1,18 @@
+--- !ditz.rubyforge.org,2008-03-06/issue 
+title: Add sections to edit
+desc: ""
+type: :task
+component: gfc
+release: 
+reporter: Tom <tom@tomhowlett.com>
+status: :unstarted
+disposition: 
+creation_time: 2008-07-24 20:46:05.384633 Z
+references: []
+
+id: f01011bd54b4af713fc1c6b0bc58fdd9c137c853
+log_events: 
+- - 2008-07-24 20:46:07.994359 Z
+  - Tom <tom@tomhowlett.com>
+  - created
+  - ""

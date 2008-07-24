@@ -1,0 +1,18 @@
+--- !ditz.rubyforge.org,2008-03-06/issue 
+title: Add Style sheet to Show
+desc: ""
+type: :task
+component: gfc
+release: 
+reporter: Tom <tom@tomhowlett.com>
+status: :unstarted
+disposition: 
+creation_time: 2008-07-24 20:44:57.279024 Z
+references: []
+
+id: eea16b67120ad29eb6003c821dc7af07f9ff3a67
+log_events: 
+- - 2008-07-24 20:45:01.352237 Z
+  - Tom <tom@tomhowlett.com>
+  - created
+  - ""

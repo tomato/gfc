@@ -1,0 +1,18 @@
+--- !ditz.rubyforge.org,2008-03-06/issue 
+title: Add validation to producers
+desc: include validation for image
+type: :task
+component: gfc
+release: 
+reporter: Tom <tom@tomhowlett.com>
+status: :unstarted
+disposition: 
+creation_time: 2008-07-24 20:44:11.147718 Z
+references: []
+
+id: 4f88fe30393c151ab3a267a7f9b8701afd7919c1
+log_events: 
+- - 2008-07-24 20:44:14.824811 Z
+  - Tom <tom@tomhowlett.com>
+  - created
+  - ""
