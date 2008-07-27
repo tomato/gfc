@@ -1,0 +1,18 @@
+--- !ditz.rubyforge.org,2008-03-06/issue 
+title: Test images on aws
+desc: ""
+type: :task
+component: gfc
+release: 
+reporter: Tom <tom@tomhowlett.com>
+status: :unstarted
+disposition: 
+creation_time: 2008-07-24 21:07:25.471280 Z
+references: []
+
+id: cba4b271b9e369a29828d1d5c0fea1081413bbd6
+log_events: 
+- - 2008-07-24 21:07:26.658385 Z
+  - Tom <tom@tomhowlett.com>
+  - created
+  - ""

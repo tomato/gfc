@@ -2,7 +2,10 @@
 jimmy:
   name: Jimmys Farm
   summary: Breeds rare breed pigs and minor celebraties
-  
+  address: The old school, bla bla  
+  website: www.jimmysfarm.com
+  email: j@jimmysfarm.com
+  tel: 0123 456 789
 
 mushroom:
   name: Janes Forest shrooms 
