@@ -1,0 +1,18 @@
+--- !ditz.rubyforge.org,2008-03-06/issue 
+title: Add status change to edit
+desc: draft, I'm happy, public.
+type: :feature
+component: gfc
+release: 
+reporter: Tom <tom@tomhowlett.com>
+status: :unstarted
+disposition: 
+creation_time: 2008-07-28 07:58:45.598848 Z
+references: []
+
+id: e2a5459fd826b269ea5230da51b8614b4ba485b6
+log_events: 
+- - 2008-07-28 07:58:47.768448 Z
+  - Tom <tom@tomhowlett.com>
+  - created
+  - ""

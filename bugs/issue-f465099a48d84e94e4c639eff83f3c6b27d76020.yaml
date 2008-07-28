@@ -1,0 +1,18 @@
+--- !ditz.rubyforge.org,2008-03-06/issue 
+title: Add authentication
+desc: Producer can see there own edit page, admin can see all
+type: :feature
+component: gfc
+release: 
+reporter: Tom <tom@tomhowlett.com>
+status: :unstarted
+disposition: 
+creation_time: 2008-07-28 08:01:22.905407 Z
+references: []
+
+id: f465099a48d84e94e4c639eff83f3c6b27d76020
+log_events: 
+- - 2008-07-28 08:01:25.214477 Z
+  - Tom <tom@tomhowlett.com>
+  - created
+  - ""

@@ -1,0 +1,18 @@
+--- !ditz.rubyforge.org,2008-03-06/issue 
+title: Add optional questions to Edit page
+desc: Why, When, producers enter the name
+type: :feature
+component: gfc
+release: 
+reporter: Tom <tom@tomhowlett.com>
+status: :unstarted
+disposition: 
+creation_time: 2008-07-28 08:00:32.632881 Z
+references: []
+
+id: cffbbe091e0f06742b6efd010d581e5b154ae1dc
+log_events: 
+- - 2008-07-28 08:00:34.731900 Z
+  - Tom <tom@tomhowlett.com>
+  - created
+  - ""

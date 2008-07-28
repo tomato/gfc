@@ -1,10 +1,84 @@
 <% form_for @producer , :html => { :multipart => true } do |form| %>
 <table>
   <tr>
-    <td>Name:</td><td> <%= form.text_field :name %></td>
-  </tr><tr>
-    <td>Summary:</td><td> <%= form.text_area :summary, :rows => 3 %></td>
-  </tr><tr>
+    <td width="50%">Your name:</td><td> <%= form.text_field :name %></td>
+  </tr>
+  <tr>
+    <td>
+      What are you all about? This will go on the front page when 
+      somebody puts their mouse over your image (10-20 words):
+    </td>
+    <td> 
+      <%= form.text_area :summary, :rows => 3 %>
+    </td>
+  </tr>
+  <tr>
+    <td rowspan=2>
+      Upload an image that shoes YOU and your PRODUCE. 
+      Produce may be dead or alive, you should be alive
+    </td> <td > <%= image_tag @producer.not_null_image, :size => "120x80" if @producer.image %> </td> 
+    </tr> 
+    <tr>
+       <td><%= file_field :image, :uploaded_data %></td>
+  </tr>
+  <tr>
+    <td>
+      What do you produce? How amazing does it taste?
+    <td>
+      <%= text_area_tag :rows => 3 %>
+    <td>
+  <tr>
+  <tr>
+    <td>
+      Upload an image that shows your range of produce in a bit more detail
+    </td>
+    <td>
+      What image here
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Where do you produce it? Not just the location but tell us about your actual 
+      farm or wherever you produce the food. Also where do the ingredients come from? The site is call 
+      "From where its grown" so this one is especially important.
+    </td>
+    <td>
+      Where text here
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Upload an image that shows where you produce your food
+    </td>
+    <td>
+      Where image here
+    </td>
+  </tr>
+  <tr>
+    <td>
+      How do you produce your food? Tell us how much love goes into it!
+    </td>
+    <td>
+      How text here
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Upload an image of you making the produce
+    </td>
+    <td>
+      How image goes here
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Now those improtant details of how the customers can get to you? Where can they buy your producer?
+    </td>
+    <td>
+      Buy text goes here
+    </td>
+  </tr>
+  <tr>
     <td>Address:</td><td> <%= form.text_area :address, :rows => 6 %></td>
   </tr><tr>
     <td>Website URL if you've got one:</td><td> <%= form.text_field :website %></td>
@@ -12,16 +86,6 @@
     <td>Email address</td><td> <%= form.text_field :email %></td>
   </tr><tr>
     <td>Telephone Number</td><td> <%= form.text_field :tel %></td>
-  </tr><tr>
-  <% if(@producer.image) %>
-    <td colspan=2><%= image_tag @producer.not_null_image %></td>
-  </tr><tr>
-    <td>Change your main image here:</td>
-    <td><%= file_field :image, :uploaded_data %></td>
-  <% else %>
-    <td>Upload the main pic that shows you and some of the things you produce:</td>
-    <td><%= file_field :image, :uploaded_data %></td>
-  <% end %>
     </tr>
 </table>
   <%= submit_tag %>
