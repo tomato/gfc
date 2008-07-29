@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+what:
+  name: What do you produce? How amazing does it taste?
+  required: true
+
+where:
+  name: Where do you produce it? Not just the location but tell us about your actual 
+      farm or wherever you produce the food. Also where do the ingredients come from? The site is called 
+      "From where its grown" so this one is especially important.
+  required: true
+
+how:
+  name: How do you produce your food? Tell us how much love goes into it!
+  required: true

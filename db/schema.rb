@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 7) do
+ActiveRecord::Schema.define(:version => 8) do
 
   create_table "images", :force => true do |t|
     t.integer "size"
@@ -38,6 +38,13 @@ ActiveRecord::Schema.define(:version => 7) do
     t.string   "website"
     t.string   "email"
     t.string   "tel"
+  end
+
+  create_table "questions", :force => true do |t|
+    t.string   "name"
+    t.boolean  "required"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

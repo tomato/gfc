@@ -1,0 +1,28 @@
+--- !ditz.rubyforge.org,2008-03-06/issue 
+title: Devise method for using producer section questions
+desc: |-
+  Create a table called questions (name text, required bit)
+  load table in migration with initial values
+  How are sections created?
+type: :feature
+component: gfc
+release: 
+reporter: Tom <tom@tomhowlett.com>
+status: :unstarted
+disposition: 
+creation_time: 2008-07-28 17:42:32.411109 Z
+references: []
+
+id: f7a8a6cf5e63804ef30cb0fec15574ed10772734
+log_events: 
+- - 2008-07-28 17:42:41.152003 Z
+  - Tom <tom@tomhowlett.com>
+  - created
+  - ""
+- - 2008-07-28 17:54:46.726835 Z
+  - Tom <tom@tomhowlett.com>
+  - commented
+  - |-
+    add a section for each required question on creation
+    bind to these in form
+    add additional questions in a seperate form

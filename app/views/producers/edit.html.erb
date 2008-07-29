@@ -25,7 +25,7 @@
     <td>
       What do you produce? How amazing does it taste?
     <td>
-      <%= text_area_tag :rows => 3 %>
+      <%= text_area :what, :summary, :rows => 3 %>
     <td>
   <tr>
   <tr>
@@ -33,7 +33,7 @@
       Upload an image that shows your range of produce in a bit more detail
     </td>
     <td>
-      What image here
+      <%= file_field :what_image, :uploaded_data %>
     </td>
   </tr>
   <tr>
@@ -43,7 +43,7 @@
       "From where its grown" so this one is especially important.
     </td>
     <td>
-      Where text here
+      <%= text_area :where, :summary, :rows => 3 %>
     </td>
   </tr>
   <tr>
@@ -51,7 +51,7 @@
       Upload an image that shows where you produce your food
     </td>
     <td>
-      Where image here
+      <%= file_field :where_image, :uploaded_data %>
     </td>
   </tr>
   <tr>
@@ -59,7 +59,7 @@
       How do you produce your food? Tell us how much love goes into it!
     </td>
     <td>
-      How text here
+      <%= text_area :how, :summary, :rows => 3 %>
     </td>
   </tr>
   <tr>
@@ -67,7 +67,7 @@
       Upload an image of you making the produce
     </td>
     <td>
-      How image goes here
+      <%= file_field :how_image, :uploaded_data %>
     </td>
   </tr>
   <tr>
