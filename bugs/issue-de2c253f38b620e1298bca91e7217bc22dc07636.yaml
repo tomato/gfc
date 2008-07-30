@@ -1,0 +1,18 @@
+--- !ditz.rubyforge.org,2008-03-06/issue 
+title: Convert views to yaml
+desc: ""
+type: :task
+component: gfc
+release: 
+reporter: Tom <tom@tomhowlett.com>
+status: :unstarted
+disposition: 
+creation_time: 2008-07-29 21:51:13.156086 Z
+references: []
+
+id: de2c253f38b620e1298bca91e7217bc22dc07636
+log_events: 
+- - 2008-07-29 21:51:16.209153 Z
+  - Tom <tom@tomhowlett.com>
+  - created
+  - ""
