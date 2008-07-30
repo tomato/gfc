@@ -16,12 +16,10 @@ class AddImages < ActiveRecord::Migration
     #Image.create :content_type => "image/jpeg", :data => IO.read("#{RAILS_ROOT}/public/images/noimage.jpg")
     
     remove_column :producers, :image
-    remove_column :producer_sections, :image
   end
 
   def self.down
     drop_table :images
     add_column :producers, :image, :string
-    add_column :producer_sections, :image, :string
   end
 end

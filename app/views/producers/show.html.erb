@@ -4,7 +4,7 @@
   <%= @producer.summary %>
 </div>
 
-<% i=0; for p in @producer.producer_sections %>
+<% i=0; for p in @producer.answers %>
 <div class="ProducerSection<%=c i+=1%>">
     <%= image_tag p.not_null_image %>
     <div class="ProducerSectionText">

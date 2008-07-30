@@ -9,7 +9,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 8) do
+ActiveRecord::Schema.define(:version => 9) do
+
+  create_table "answers", :force => true do |t|
+    t.text     "text"
+    t.integer  "producer_id", :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "images", :force => true do |t|
     t.integer "size"
@@ -19,14 +26,6 @@ ActiveRecord::Schema.define(:version => 8) do
     t.integer "width"
     t.integer "section_id"
     t.string  "section_type"
-  end
-
-  create_table "producer_sections", :force => true do |t|
-    t.integer  "producer_id",                 :null => false
-    t.string   "name",        :default => "", :null => false
-    t.string   "summary",     :default => "", :null => false
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
   create_table "producers", :force => true do |t|
