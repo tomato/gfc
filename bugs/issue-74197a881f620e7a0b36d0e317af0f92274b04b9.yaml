@@ -1,0 +1,18 @@
+--- !ditz.rubyforge.org,2008-03-06/issue 
+title: find out what -%> means!
+desc: t
+type: :task
+component: gfc
+release: 
+reporter: Tom <tom@tomhowlett.com>
+status: :unstarted
+disposition: 
+creation_time: 2008-07-31 21:28:47.260223 Z
+references: []
+
+id: 74197a881f620e7a0b36d0e317af0f92274b04b9
+log_events: 
+- - 2008-07-31 21:28:48.227036 Z
+  - Tom <tom@tomhowlett.com>
+  - created
+  - ""

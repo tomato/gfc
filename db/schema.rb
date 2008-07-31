@@ -1,5 +1,5 @@
 # This file is auto-generated from the current state of the database. Instead of editing this file, 
-# please use the migrations feature of ActiveRecord to incrementally modify your database, and
+# please use the migrations feature of Active Record to incrementally modify your database, and
 # then regenerate this schema definition.
 #
 # Note that this schema.rb definition is the authoritative source for your database schema. If you need
@@ -9,22 +9,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 9) do
-
-  create_table "answers", :force => true do |t|
-    t.text     "text"
-    t.integer  "producer_id", :null => false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(:version => 8) do
 
   create_table "images", :force => true do |t|
-    t.integer "size"
+    t.integer "size",         :limit => 11
     t.string  "content_type"
     t.string  "filename"
-    t.integer "height"
-    t.integer "width"
-    t.integer "section_id"
+    t.integer "height",       :limit => 11
+    t.integer "width",        :limit => 11
+    t.integer "section_id",   :limit => 11
     t.string  "section_type"
   end
 

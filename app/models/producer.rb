@@ -1,4 +1,3 @@
-require 'image_helpers'
 
 class Producer < ActiveRecord::Base
   include ImageHelpers
@@ -18,4 +17,10 @@ class Producer < ActiveRecord::Base
     Producer.find(:all, :limit => num)
   end
 
+  def create_default_answers
+    Question.find(:all).each do |q|
+      self.answers << Answer.new(:producer_id => self.id,
+                                     :question_id => q.id)
+    end
+  end
 end

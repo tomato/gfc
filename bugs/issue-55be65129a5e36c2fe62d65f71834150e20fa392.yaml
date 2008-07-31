@@ -1,0 +1,18 @@
+--- !ditz.rubyforge.org,2008-03-06/issue 
+title: "call create_default_answers on new "
+desc: ""
+type: :task
+component: gfc
+release: 
+reporter: Tom <tom@tomhowlett.com>
+status: :unstarted
+disposition: 
+creation_time: 2008-07-31 21:28:20.375539 Z
+references: []
+
+id: 55be65129a5e36c2fe62d65f71834150e20fa392
+log_events: 
+- - 2008-07-31 21:28:21.575217 Z
+  - Tom <tom@tomhowlett.com>
+  - created
+  - ""

@@ -10,16 +10,20 @@ class ProducersController < ApplicationController
 
   def new
     @producer = Producer.new
+    @producer.create_default_answers
     render :action => "edit"
   end
 
   def create
     @producer = Producer.new(params[:producer])
-    @producer.image = Image.new(params[:image]) if(params[:image])
+    @producer.create_default_answers
+    @producer.image = Image.new(params[:image]) if(params[:image].empty?)
+
     if(@producer.save)
       flash[:notice] = 'Your details have been saved'
       redirect_to(@producer)
     else
+      @questions = Question.find(:all)
       render :action => "edit"
     end
 
