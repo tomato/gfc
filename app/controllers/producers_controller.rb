@@ -16,8 +16,8 @@ class ProducersController < ApplicationController
 
   def create
     @producer = Producer.new(params[:producer])
-    @producer.create_default_answers
     @producer.image = Image.new(params[:image]) if(params[:image].empty?)
+    params[:answer].each {|ans| @producer.answers << Answer.new(ans) }
 
     if(@producer.save)
       flash[:notice] = 'Your details have been saved'

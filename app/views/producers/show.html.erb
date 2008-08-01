@@ -8,8 +8,8 @@
 <div class="ProducerSection<%=c i+=1%>">
     <%= image_tag p.not_null_image %>
     <div class="ProducerSectionText">
-      <h3><%= h(p.name) %></h3>
-      <br><%= h(p.summary) %>
+      <h3><%= h(p.question.name) %></h3>
+      <br><%= h(p.text) %>
     </div>
   </div>
 <% end %>

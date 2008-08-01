@@ -1,4 +1,5 @@
 <% form_for @producer , :html => { :multipart => true } do |form| %>
+<%= error_messages_for :producer %>
 <table>
   <tr>
     <td width="50%">Your name:</td><td> <%= form.text_field :name %></td>
@@ -21,21 +22,24 @@
     <tr>
        <td><%= file_field :image, :uploaded_data %></td>
   </tr>
-  <% @producer.answers.each do |answer|
-    question = answer.question %>
+  <% @producer.answers.each do |@answer|
+    question = @answer.question 
+    fields_for @answer, :index => @answer.id do |ans|%>
   <tr>
     <td>
       <%= question.name %>
     <td>
-      <%= text_area question.to_sym, :text, :rows => 3 %>
+      <%= ans.text_area :text, :rows => 3 %>
+      <%= ans.hidden_field :question_id %>
     <td>
   <tr>
+  <% end -%>
   <tr>
     <td>
       Upload an image that shows it:
     </td>
     <td>
-      <%= file_field question.to_sym, :uploaded_data %>
+      <%= file_field "answer[].image", :uploaded_data %>
     </td>
   </tr>
   <% end -%>
