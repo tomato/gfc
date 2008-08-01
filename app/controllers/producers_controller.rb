@@ -31,9 +31,15 @@ class ProducersController < ApplicationController
 
   def update
     @producer = Producer.find(params[:id])
+    @producer.attributes = params[:producer]
     @producer.image = Image.new(params[:image]) if(params[:image][:uploaded_data].length > 0)
+    params[:answer].each do |key,value| 
+      answer =  @producer.answers.find(key)
+      answer.attributes = value 
+      answer.save!
+    end
 
-    if(@producer.update_attributes(params[:producer]))
+    if(@producer.save)
       flash[:notice] = "You've been updated"
       redirect_to(@producer)
     else
