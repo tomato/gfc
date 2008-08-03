@@ -16,7 +16,6 @@ class ProducersController < ApplicationController
 
   def create
     @producer = Producer.new(params[:producer])
-    @producer.image = Image.new(params[:image]) if(params[:image].empty?)
     params[:answer].each {|ans| @producer.answers << Answer.new(ans) }
 
     if(@producer.save)
@@ -32,7 +31,7 @@ class ProducersController < ApplicationController
   def update
     @producer = Producer.find(params[:id])
     @producer.attributes = params[:producer]
-    @producer.image = Image.new(params[:image]) if(params[:image][:uploaded_data].length > 0)
+
     params[:answer].each do |key,value| 
       answer =  @producer.answers.find(key)
       answer.attributes = value 

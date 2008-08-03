@@ -17,10 +17,10 @@
     <td rowspan=2>
       Upload an image that shoes YOU and your PRODUCE. 
       Produce may be dead or alive, you should be alive
-    </td> <td > <%= image_tag @producer.not_null_image, :size => "120x80" if @producer.image %> </td> 
+    </td> <td > <%= image_tag @producer.image_path, :size => "120x80" if @producer.image %> </td> 
     </tr> 
     <tr>
-       <td><%= file_field :image, :uploaded_data %></td>
+       <td><%= form.file_field :uploaded_data %></td>
   </tr>
   <% @producer.answers.each do |@answer|
     question = @answer.question 
@@ -33,14 +33,13 @@
       <%= ans.hidden_field :question_id %>
     <td>
   <tr>
-  <% end -%>
   <tr>
     <td>
       Upload an image that shows it:
     </td>
-    <td>
-    </td>
+     <td><%= ans.file_field :uploaded_data %></td>
   </tr>
+  <% end -%>
   <% end -%>
   <tr>
     <td>

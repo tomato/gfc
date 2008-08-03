@@ -3,7 +3,7 @@
   for producer in @producers
   cell_class = "Cell" + (i+=1).to_s -%>
   <div class="SelectionImage <%=cell_class %>" >
-    <%= link_to(image_tag(producer.not_null_image),
+    <%= link_to(image_tag(producer.image_path),
     producer_path(producer.id)) %>
   </div>
   <div class="SelectionText <%=cell_class %>">

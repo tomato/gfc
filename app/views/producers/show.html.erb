@@ -1,12 +1,12 @@
 <div>
   <h2><%= @producer.name %></h2>
-  <%= image_tag @producer.not_null_image %>
+  <%= image_tag @producer.image_path %>
   <%= @producer.summary %>
 </div>
 
 <% i=0; for p in @producer.answers %>
 <div class="ProducerSection<%=c i+=1%>">
-    <%= image_tag p.not_null_image %>
+    <%= image_tag p.image_path %>
     <div class="ProducerSectionText">
       <h3><%= h(p.question.name) %></h3>
       <br><%= h(p.text) %>
