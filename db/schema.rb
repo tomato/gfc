@@ -9,7 +9,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 8) do
+ActiveRecord::Schema.define(:version => 9) do
+
+  create_table "answers", :force => true do |t|
+    t.text     "text"
+    t.integer  "producer_id", :limit => 11, :null => false
+    t.integer  "question_id", :limit => 11, :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "images", :force => true do |t|
     t.integer "size",         :limit => 11

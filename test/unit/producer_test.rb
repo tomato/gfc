@@ -13,13 +13,13 @@ class ProducerTest < ActiveSupport::TestCase
 
   def test_main_image
     producer = Producer.find(:first)
-    assert_not_nil producer.not_null_image, "Main Image not found"
+    assert_not_nil producer.image_path, "Main Image not found"
   end
 
   def test_empty_main_image
     p = Producer.new()
-    assert_not_nil p.not_null_image
-    assert_equal 'noimage.jpg', p.not_null_image, "i=" + p.not_null_image
+    assert_not_nil p.image_path
+    assert_equal 'noimage.jpg', p.image_path, "i=" + p.image_path
   end
 
   #Validation Tests
@@ -66,6 +66,29 @@ class ProducerTest < ActiveSupport::TestCase
     assert p.errors.invalid?(:summary)
   end
 
+  #Create question test
+  def test_create_default_answers
+    p = Producer.new
+    p.create_default_answers
+    assert_equal Question.find(:all).length, p.answers.length
+  end
+  
+  def test_create_answers
+#    answers = {"1" => {"text" => "First Answer"}, "2" => {"text" => "Second Answer"}}
+    answers = [{"text" => "First Answer"},{"text" => "second"}]
+    p = Producer.new
+    p.create_answers answers
+    assert_equal 2, p.answers.length
+  end
+
+  def test_update_answers
+    #original_answer = {"answer" => {"1" => {:text => "First Answer"}}}
+    #updated_answer = {"answer" => {"1" => {:text => "updated Answer"}}}
+    #p = Producer.new
+    #p.create_answers original_answer
+    #p.update_answers updated_answer
+    #assert_equal original_answer, p.answer[0].text 
+  end
   private
 
   def get_jimmy
