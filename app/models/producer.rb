@@ -23,4 +23,16 @@ class Producer < ActiveRecord::Base
                                      :question_id => q.id)
     end
   end
+
+  def create_answers(answers)
+    answers.each {|ans| self.answers << Answer.new(ans) }
+  end
+
+  def update_answers(answers)
+    answers.each do |key,value| 
+      answer =  self.answers.find(key)
+      answer.attributes = value 
+      answer.save!
+    end
+  end
 end

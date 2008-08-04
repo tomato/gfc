@@ -16,7 +16,7 @@ class ProducersController < ApplicationController
 
   def create
     @producer = Producer.new(params[:producer])
-    params[:answer].each {|ans| @producer.answers << Answer.new(ans) }
+    @producer.create_answers(params[:answer])
 
     if(@producer.save)
       flash[:notice] = 'Your details have been saved'
@@ -31,12 +31,7 @@ class ProducersController < ApplicationController
   def update
     @producer = Producer.find(params[:id])
     @producer.attributes = params[:producer]
-
-    params[:answer].each do |key,value| 
-      answer =  @producer.answers.find(key)
-      answer.attributes = value 
-      answer.save!
-    end
+    @producer.update_answers(params[:answer])
 
     if(@producer.save)
       flash[:notice] = "You've been updated"

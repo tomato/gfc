@@ -5,8 +5,8 @@ type: :task
 component: gfc
 release: 
 reporter: Tom <tom@tomhowlett.com>
-status: :unstarted
-disposition: 
+status: :closed
+disposition: :fixed
 creation_time: 2008-07-24 20:46:05.384633 Z
 references: []
 
@@ -15,4 +15,8 @@ log_events:
 - - 2008-07-24 20:46:07.994359 Z
   - Tom <tom@tomhowlett.com>
   - created
+  - ""
+- - 2008-08-04 07:23:44.184747 Z
+  - Tom <tom@tomhowlett.com>
+  - closed issue with disposition fixed
   - ""

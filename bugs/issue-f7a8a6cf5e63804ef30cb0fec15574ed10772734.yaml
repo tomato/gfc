@@ -8,8 +8,8 @@ type: :feature
 component: gfc
 release: 
 reporter: Tom <tom@tomhowlett.com>
-status: :unstarted
-disposition: 
+status: :closed
+disposition: :fixed
 creation_time: 2008-07-28 17:42:32.411109 Z
 references: []
 
@@ -26,3 +26,7 @@ log_events:
     add a section for each required question on creation
     bind to these in form
     add additional questions in a seperate form
+- - 2008-08-04 07:24:18.989875 Z
+  - Tom <tom@tomhowlett.com>
+  - closed issue with disposition fixed
+  - ""
