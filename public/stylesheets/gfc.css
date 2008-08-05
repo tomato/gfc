@@ -148,3 +148,49 @@ div.ProducerSectiontext
   color: green;
   text-align: center;
 }
+
+div.row
+{
+  width:100%;
+  padding: 10px;
+  clear: right;
+}
+
+div.left
+{
+  width:45%;
+  vertical-align: middle;
+  text-align: right;
+  margin-right: 5%;
+  float:left;
+}
+
+div.right
+{
+  width:50%;
+  float:right;
+}
+
+div.section
+{
+  padding:10px;
+  margin:10px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: grey;
+}
+
+div.spacer
+{
+  clear:both;
+}
+
+textarea.summary
+{
+  height: 5em;
+}
+
+textarea.text
+{
+  height:10em;
+}

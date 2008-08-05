@@ -1,0 +1,48 @@
+- form_for @producer , :html => { :multipart => true } do |form| 
+  = error_messages_for :producer 
+  .section
+    = image_tag @producer.image_path, :size => "120x80", :style => "float:left;"  if @producer.image 
+    .row
+      .left Your name
+      .right= form.text_field :name
+    .row
+      .left
+        What are you all about? This will go on the front page when 
+        somebody puts their mouse over your image (10-20) words
+      .right 
+        = form.text_area :summary, :class => "summary" 
+    .row
+      .left
+        Upload an image that shoes YOU and your PRODUCE. 
+        Produce may be dead or alive, you should be alive
+      .right= form.file_field :uploaded_data 
+    .spacer
+  - @producer.answers.each do |@answer|
+    - question = @answer.question 
+    - fields_for @answer, :index => @answer.id do |ans|
+      .section
+        .row
+          .left= question.name
+          .right
+            = ans.text_area :text, :class => "text"
+            = ans.hidden_field :question_id
+        .row
+          .left Upload an image that shows it:
+          .right= ans.file_field :uploaded_data 
+        .spacer
+  .section
+    .row 
+      Now those improtant details of how the customers can get to you? Where can they buy your produce?
+      .left Address
+      .right= form.text_area :address, :rows => 6 
+    .row
+      .left Website URL if you've got one:
+      .right= form.text_field :website 
+    .row
+      .left Email address
+      .right= form.text_field :email 
+    .row
+      .left Telephone Number
+      .right= form.text_field :tel 
+    .spacer
+  .row= submit_tag 
