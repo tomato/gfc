@@ -4,4 +4,8 @@ class Question < ActiveRecord::Base
   def to_sym
     name.split[0].downcase.to_sym
   end
+
+  def title
+    "#{name.split[0]}?"
+  end
 end

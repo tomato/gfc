@@ -1,7 +1,7 @@
 - form_for @producer , :html => { :multipart => true } do |form| 
   = error_messages_for :producer 
   %fieldset
-    %legend You
+    %legend You?
     %p
       %label Your name
       = form.text_field :name
@@ -21,6 +21,7 @@
     - question = @answer.question 
     - fields_for @answer, :index => @answer.id do |ans|
       %fieldset
+        %legend= question.title
         %p
           %label= question.name
           = ans.text_area :text, :class => "text"
@@ -32,6 +33,7 @@
           = ans.file_field :uploaded_data 
         .spacer
   %fieldset
+    %legend Contact?
     %p 
       Now those improtant details of how the customers can get to you? Where can they buy your produce?
       %label Address

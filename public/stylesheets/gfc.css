@@ -140,7 +140,14 @@ form fieldset
 {
   width:80%;
   margin: 0.5em auto;
+  border-style: dashed;
 }
+
+form legend
+{
+  font-style:italic;
+}
+  
 
 form label
 {
