@@ -54,18 +54,19 @@ div#selectionbox img
 div#selectionbox > div.SelectionImage
 {
   z-index:2;
-  width:240;
-  height:160;
+  width:240px;
+  height:160px;
   float:left;
 }
 
 div#selectionbox > div.SelectionText
 {
-  width:200;
-  height:120;
+  width:200px;
+  height:120px;
   z-index:1;
   padding:20px;
   float:left;
+  text-align:center;
 }
 
 div#selectionbox > div.Cell1
@@ -146,6 +147,7 @@ form fieldset
 form legend
 {
   font-style:italic;
+  font-size:1.2em;
 }
   
 
@@ -167,6 +169,12 @@ form label img
 form p
 {
   clear:left
+}
+
+form div.submission
+{
+  margin: 1em auto;
+  width:100px;
 }
 
 div.spacer
