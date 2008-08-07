@@ -1,3 +1,4 @@
+/*Common Styles */
 *
 {
   font-family:Georgia;
@@ -20,36 +21,26 @@ h3
   margin:5px;
 }
 
-div#leftbar
-{
-  float:left;
-  width:15%;
-}
-
-div#menu
-{
-
-  margin-left:10px;
-  margin-right:10px;
-  margin-top:40px;
-}
-
-div#menu img
-{
-  margin:5px;
-}
-
 div#main
 {
   float:right;
-  width:84%;
+  width:100%;
   height:100%;
 }
 
+.Flash
+{
+  color: green;
+  text-align: center;
+}
+
+/* Index Styles */
 div#selectionbox
 {
+  width:720px;
+  height:320px;
   margin:20px;
-  text-align:center;
+  margin: 0 auto;
   position:relative;
 }
 
@@ -118,6 +109,7 @@ div#selectionbox > div.Cell6
   left:480px;
 }
 
+/* Show Styles */
 div.ProducerSection1, div.ProducerSection2
 {
   float: none;
@@ -143,41 +135,31 @@ div.ProducerSectiontext
   vertical-align: middle;
 }
 
-.Flash
+/* Edit Styles */
+form fieldset
 {
-  color: green;
-  text-align: center;
+  width:80%;
+  margin: 0.5em auto;
 }
 
-div.row
+form label
 {
-  width:100%;
-  padding: 10px;
-  clear: right;
-}
-
-div.left
-{
-  width:45%;
-  vertical-align: middle;
-  text-align: right;
-  margin-right: 5%;
   float:left;
+  text-align:right;
+  width:40%;
+  margin-right:1em;
 }
 
-div.right
+form label img
 {
-  width:50%;
-  float:right;
+  float:left;
+  width:120px;
+  height:80px:
 }
 
-div.section
+form p
 {
-  padding:10px;
-  margin:10px;
-  border-width: 2px;
-  border-style: solid;
-  border-color: grey;
+  clear:left
 }
 
 div.spacer

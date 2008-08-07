@@ -1,0 +1,10 @@
+!!!
+%html
+  %head
+    %title Passion before profit....
+    = stylesheet_link_tag 'gfc' 
+    = javascript_include_tag "jquery", "browse" 
+  %body
+    %h1= image_tag "fromwhereitsgrown.gif"
+    #main
+      = yield :layout 
