@@ -1,0 +1,18 @@
+--- !ditz.rubyforge.org,2008-03-06/issue 
+title: Add test for resizing images - need to check gem is running correctly before live
+desc: ""
+type: :task
+component: gfc
+release: 
+reporter: Tom <tom@tomhowlett.com>
+status: :unstarted
+disposition: 
+creation_time: 2008-08-13 15:35:10.183508 Z
+references: []
+
+id: 7ec1c80d150a8b003f0a7967612d10198f14bd1d
+log_events: 
+- - 2008-08-13 15:35:14.586201 Z
+  - Tom <tom@tomhowlett.com>
+  - created
+  - ""

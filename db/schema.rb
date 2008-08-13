@@ -30,8 +30,8 @@ ActiveRecord::Schema.define(:version => 9) do
   end
 
   create_table "producers", :force => true do |t|
-    t.string   "name",                      :default => "", :null => false
-    t.string   "summary",                   :default => "", :null => false
+    t.string   "name",                      :null => false
+    t.string   "summary",                   :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "address",    :limit => 500

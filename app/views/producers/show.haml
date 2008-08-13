@@ -1,0 +1,5 @@
+%h2= @producer.name
+- i=0; for p in @producer.answers 
+  %p{:class => "section#{c(i+=1)}"} 
+    =image_tag p.image_path
+    =h(p.text)

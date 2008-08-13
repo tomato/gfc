@@ -111,29 +111,22 @@ div#selectionbox > div.Cell6
 }
 
 /* Show Styles */
-div.ProducerSection1, div.ProducerSection2
+p.section1, p.section2
 {
   float: none;
   clear: both;
 }
 
-div.ProducerSection1  img
+p.section1 img
 {
   float: left;
   margin-right: 20px;
 }
 
-div.ProducerSection2  img
+p.section2 img
 {
   float: right;
   margin-left: 20px;
-}
-
-div.ProducerSectiontext
-{
-  padding: 20px;
-  text-align: center;
-  vertical-align: middle;
 }
 
 /* Edit Styles */
