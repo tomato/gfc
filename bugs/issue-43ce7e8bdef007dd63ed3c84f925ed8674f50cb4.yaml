@@ -1,0 +1,18 @@
+--- !ditz.rubyforge.org,2008-03-06/issue 
+title: create a logo
+desc: possibly a round image with a romano cauliflower pattern
+type: :feature
+component: gfc
+release: 
+reporter: Tom <tom@tomhowlett.com>
+status: :unstarted
+disposition: 
+creation_time: 2008-08-15 13:57:31.581378 Z
+references: []
+
+id: 43ce7e8bdef007dd63ed3c84f925ed8674f50cb4
+log_events: 
+- - 2008-08-15 13:57:33.511095 Z
+  - Tom <tom@tomhowlett.com>
+  - created
+  - ""
