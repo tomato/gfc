@@ -12,3 +12,4 @@ namespace :lockup do
     producers.each{|p| p.save! }
   end
 end
+
