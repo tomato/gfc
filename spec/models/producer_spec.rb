@@ -21,9 +21,7 @@ describe Producer do
   it "should error if name is not unique" 
 
   it "should error if email is not valid" do
-    @producer.attributes = valid_producer_attributes.with(:email => "grrr")
-    @producer.should_not be_valid
-    @producer.should have(1).error_on(:email)
+    validate_producer_with_invalid_attrib :email => "grrrr"
     @producer.errors[:email].should include "is invalid"
   end
 
@@ -52,14 +50,26 @@ describe Producer do
      @producer.attributes = valid_producer_attributes.with(:summary => "a"*19)
      @producer.should_not be_valid
      @producer.should have(1).error_on(:summary)
-     @producer.errors[:name].should include "is too short"
+     @producer.errors[:summary].should include "is too short"
   end
 
   it "should error if summary length is greater than 100" do
-     @producer.attributes = valid_producer_attributes.with(:name => "a"*101)
+     @producer.attributes = valid_producer_attributes.with(:summary => "a"*101)
      @producer.should_not be_valid
      @producer.should have(1).error_on(:summary)
-     @producer.errors[:name].should include "is too long"
+     @producer.errors[:summary].should include "is too long"
+  end
+
+  it "should return the correct number of Producers"
+  it "should return an error if a negative amount of Producers are requested"
+  it "should create a default answer for each mandatory answer"
+  it "should associate any answers passed to create answers"
+  it "should update any answers passed in update answers"
+  it "should not update answers not passed to update_answers"
+  it "should return the associated image"
+
+  it "should return the noimage image if no images are associated" do
+    @producer.image_path.should eql("noimage.jpg")
   end
 
   private
@@ -76,5 +86,11 @@ describe Producer do
       "summary"=>"growing ripe red juic tomatoes", 
       "email"=>"tom@tomstomatoes.com"
     }
+  end
+
+  def validate_producer_with_invalid_attrib(attrib)
+    @producer.attributes = valid_producer_attributes.with(attrib)
+    @producer.should_not be_valid
+    @producer.should have(1).error_on(attrib.keys.first)
   end
 end
