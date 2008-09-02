@@ -1,15 +1,28 @@
+@home_dir = File.join(File.dirname(__FILE__), "../..", "db/backup/")
+@tables = ['producers', 'questions', 'answers', 'images']
+
 namespace :lockup do
-  desc 'Save Producers to yaml'
+  desc 'Save models to yaml'
   task :save => :environment do
-    puts 'Persisting Producers'
-    open("producers.yaml","w"){|f| f.puts Producer.find(:all).to_yaml}
+    @tables.each do | t |
+      puts "Backing up #{t}"
+      open(storage_path(t),"w") do |f|
+        f.puts eval(t.singularize.capitalize).find(:all).to_yaml
+      end
+    end
   end
 
-  desc 'Load Producers from saved yaml'
+  desc 'Load models from saved yaml'
   task :load => :environment do
-    puts 'Loading up Producers'
-    producers = open("producers.yaml"){ YAML.load(f.read) }
-    producers.each{|p| p.save! }
+    @tables.each do |t|
+      puts 'Loading up models'
+      models = open(storage_path(t)){ YAML.load(f.read) }
+      models.each{|p| p.save! }
+    end
+  end
+
+  def storage_path(table)
+    @home_dir + table + ".yaml"
   end
 end
 

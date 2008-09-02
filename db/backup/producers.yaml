@@ -1,0 +1,90 @@
+--- 
+- !ruby/object:Producer 
+  attributes: 
+    address: |-
+      The village hall
+      Witham
+      Essex
+      CM8 3df
+    name: Toms tomatoes
+    created_at: 2008-08-11 08:44:51
+    updated_at: 2008-08-11 08:44:51
+    tel: 4324280 08080980
+    id: "1"
+    website: www.tomstomatoes.com
+    summary: growing ripe red juic tomatoes
+    email: tom@tomstomatoes.com
+  attributes_cache: {}
+
+- !ruby/object:Producer 
+  attributes: 
+    address: |-
+      The Boat
+      Lyme Regis
+    name: I Am A FIsh
+    created_at: 2008-08-15 17:13:29
+    updated_at: 2008-08-15 17:13:29
+    tel: "3659486045986"
+    id: "2"
+    website: http://www.fishweekly.com
+    summary: Finest fish from Dorset .
+    email: tom@fishweekly.com
+  attributes_cache: {}
+
+- !ruby/object:Producer 
+  attributes: 
+    address: |-
+      Ste-wen, 
+      Allet, 
+      Truro, 
+      Cornwall, 
+      TR4 9DJ
+    name: Allet Dairy Goats
+    created_at: 2008-08-16 13:30:40
+    updated_at: 2008-08-16 20:32:09
+    tel: "01872 222 955 "
+    id: "3"
+    website: http://www.alletdairygoats.co.uk
+    summary: A family business delivering quality fresh goats' milk products
+    email: "info@alletdairygoats.co.uk "
+  attributes_cache: {}
+
+- !ruby/object:Producer 
+  attributes: 
+    address: |
+      Well Hung Meat
+      Tordean Farm
+      Dean Prior
+      Buckfastleigh
+      Devon
+      TQ11 0LY
+
+    name: Well Hung Meat Company
+    created_at: 2008-08-16 20:30:26
+    updated_at: 2008-08-16 20:30:26
+    tel: 0845 230 3131
+    id: "4"
+    website: http://www.wellhungmeat.com
+    summary: The Most Delicious Organic Meat imaginable
+    email: hello@wellhungmeat.com
+  attributes_cache: {}
+
+- !ruby/object:Producer 
+  attributes: 
+    address: "35 Greenways, \r\n\
+      Sutton Heath, \r\n\
+      Nr Woodbridge, \r\n\
+      Suffolk, \r\n\
+      IP12 3TP "
+    name: Case de L'Oli
+    created_at: 2008-08-16 22:04:17
+    updated_at: 2008-08-16 22:04:17
+    tel: "01394 420306 "
+    id: "5"
+    website: http://www.casadeloli.com
+    summary: |-
+      We are passionate about our olives         
+      and the olive oil we create
+    email: olive.oil@casadeloli.com
+  attributes_cache: {}
+

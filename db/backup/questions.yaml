@@ -1,0 +1,28 @@
+--- 
+- !ruby/object:Question 
+  attributes: 
+    required: "1"
+    name: Where do you produce it? Not just the location but tell us about your actual farm or wherever you produce the food. Also where do the ingredients come from? The site is called "From where its grown" so this one is especially important.
+    created_at: 2008-08-10 00:34:53
+    updated_at: 2008-08-10 00:34:53
+    id: "691129074"
+  attributes_cache: {}
+
+- !ruby/object:Question 
+  attributes: 
+    required: "1"
+    name: What do you produce? How amazing does it taste?
+    created_at: 2008-08-10 00:34:53
+    updated_at: 2008-08-10 00:34:53
+    id: "756776720"
+  attributes_cache: {}
+
+- !ruby/object:Question 
+  attributes: 
+    required: "1"
+    name: How do you produce your food? Tell us how much love goes into it!
+    created_at: 2008-08-10 00:34:53
+    updated_at: 2008-08-10 00:34:53
+    id: "893555569"
+  attributes_cache: {}
+

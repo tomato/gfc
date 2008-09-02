@@ -1,0 +1,199 @@
+--- 
+- !ruby/object:Answer 
+  attributes: 
+    question_id: "691129074"
+    created_at: 2008-08-11 08:44:51
+    updated_at: 2008-08-11 08:44:51
+    text: Poduced in our back garden in the beautiful country village of Witham-on-Marsh. Under polytunnels and outdoors.
+    id: "1"
+    producer_id: "1"
+  attributes_cache: {}
+
+- !ruby/object:Answer 
+  attributes: 
+    question_id: "756776720"
+    created_at: 2008-08-11 08:44:51
+    updated_at: 2008-08-11 08:44:51
+    text: Tomatoes of all variaties Tomatoes of all variatiesTomatoes of all variatiesTomatoes of all variatiesTomatoes of all variatiesTomatoes of all variatiesTomatoes of all variatiesTomatoes of all variatiesTomatoes of all variaties
+    id: "2"
+    producer_id: "1"
+  attributes_cache: {}
+
+- !ruby/object:Answer 
+  attributes: 
+    question_id: "893555569"
+    created_at: 2008-08-11 08:44:52
+    updated_at: 2008-08-11 08:44:52
+    text: "From seed in march. Organically. From seed in march. Organically. From seed in march. Organically. From seed in march. Organically. From seed in march. Organically. From seed in march. Organically. From seed in march. Organically. From seed in march. Organically. From seed in march. Organically. From seed in march. Organically. From seed in march. Organically. From seed in march. Organically. From seed in march. Organically. From seed in march. Organically. From seed in march. Organically. From seed in march. Organically. "
+    id: "3"
+    producer_id: "1"
+  attributes_cache: {}
+
+- !ruby/object:Answer 
+  attributes: 
+    question_id: "691129074"
+    created_at: 2008-08-15 17:13:30
+    updated_at: 2008-08-15 17:13:30
+    text: Caught by line on our 24 ft boat. On day trips from lyme RegisCaught by line on our 24 ft boat. On day trips from lyme RegisCaught by line on our 24 ft boat. On day trips from lyme Regis
+    id: "4"
+    producer_id: "2"
+  attributes_cache: {}
+
+- !ruby/object:Answer 
+  attributes: 
+    question_id: "756776720"
+    created_at: 2008-08-15 17:13:30
+    updated_at: 2008-08-15 17:13:30
+    text: Mackerel, Mullet, Lobsters, Trout. Mackerel, Mullet, Lobsters, TroutMackerel, Mullet, Lobsters, TroutMackerel, Mullet, Lobsters, TroutMackerel, Mullet, Lobsters, TroutMackerel, Mullet, Lobsters, TroutMackerel, Mullet, Lobsters, Trout
+    id: "5"
+    producer_id: "2"
+  attributes_cache: {}
+
+- !ruby/object:Answer 
+  attributes: 
+    question_id: "893555569"
+    created_at: 2008-08-15 17:13:30
+    updated_at: 2008-08-15 17:13:30
+    text: Daily trips so we never know what we'll catch, if you fancy a lucky dip we'll send you fish every week, but your guess is as good as ours as to what it will be
+    id: "6"
+    producer_id: "2"
+  attributes_cache: {}
+
+- !ruby/object:Answer 
+  attributes: 
+    question_id: "691129074"
+    created_at: 2008-08-16 13:30:40
+    updated_at: 2008-08-16 13:30:40
+    text: Our cosy farm, near Truro, nestles in the heart of rural Cornwall. This picturesque and sheltered location provides a high-quality grazing environment for our herd of 150 pedigree British Sannens, giving great flavour to the milk and the products made from it. Allet Dairy Goats is the only working dairy goat farm in Cornwall.
+    id: "7"
+    producer_id: "3"
+  attributes_cache: {}
+
+- !ruby/object:Answer 
+  attributes: 
+    question_id: "756776720"
+    created_at: 2008-08-16 13:30:40
+    updated_at: 2008-08-16 13:30:40
+    text: "Making cheese from goats' milk is a centuries-old tradition that we're proud to continue. The indisputable richness of our milk gives our hand-made cheese an excellent flavour. The cheese from our dairy is the only goats' cheese to be made in Cornwall from goats farmed and milked in Cornwall.\r\n\
+      \r\n\
+      Allet Dairy Goats milk is an excellent alternative to traditional dairy milk. Replacing traditional dairy products with goats\xE2\x80\x99 milk products in your diet can make a real difference. Many people suffering from food intolerance find the switch helps relieve many symptoms. The fat particles in goats\xE2\x80\x99 milk are far smaller than those in cows\xE2\x80\x99 milk making it easily digestible. "
+    id: "8"
+    producer_id: "3"
+  attributes_cache: {}
+
+- !ruby/object:Answer 
+  attributes: 
+    question_id: "893555569"
+    created_at: 2008-08-16 13:30:40
+    updated_at: 2008-08-16 13:30:40
+    text: Each Allet Dairy Goats product is full of the goodness of happy Cornish goats that spend their summers roaming the lush fields of this beautiful rural county. We are Cornwall's only commercial herd and our mission is to offer top quality dairy products which are characteristically full of flavour as well as being a healthy choice for all the family.
+    id: "9"
+    producer_id: "3"
+  attributes_cache: {}
+
+- !ruby/object:Answer 
+  attributes: 
+    question_id: "691129074"
+    created_at: 2008-08-16 20:30:26
+    updated_at: 2008-08-16 20:30:26
+    text: "Carswell Farm stretches for 3 miles along the South Devon coast and has a tradition of sheep and cattle farming going back hundreds of years. We\xE2\x80\x99re devoted to bringing you the finest organic produce from a beautiful, lush natural environment.\r\n\
+      \r\n\
+      The animals certainly love it. If you\xE2\x80\x99ve ever made it down to Devon, chances are the rain was coming down in buckets or the sun was pounding. This sort of weather might make it hard to decide whether or not to put the washing out, but it produces the best pasture in Britain.\r\n\
+      \r\n\
+      Debbie and Simon Andrews grow turkeys and geese for us at Christmas.\r\n\
+      They are based at South Torfrey Farm in Fowey, Cornwall. We first\r\n\
+      met Debbie and Simon when we were looking for organic turkeys in the Summer of 2003, we were very impressed with the way the birds were looked after. Kept in low density housing, bedded on straw and fed outside to encourage a free range habit.\r\n\
+      \r\n\
+      Debbie and Simon are also keen on having their birds hung, as with meat this improves the tenderness and flavour of the birds. Debbie and Simon have been certified organic for a number of years and their saying 'In the soil there lies the answer' is something that we very much subscribe to.\r\n\
+      \r\n"
+    id: "10"
+    producer_id: "4"
+  attributes_cache: {}
+
+- !ruby/object:Answer 
+  attributes: 
+    question_id: "756776720"
+    created_at: 2008-08-16 20:30:27
+    updated_at: 2008-08-16 20:30:27
+    text: |
+      Our award-winning organic Well Hung Beef (Pedigree South Devon) is hung for 21 days and is the most tender and flavoursome around.
+      
+      It's with our organic Well Hung Lamb that we made our name. Winning the Soil Association's Organic Food Awards two years running, you won't find better.
+      
+
+    id: "11"
+    producer_id: "4"
+  attributes_cache: {}
+
+- !ruby/object:Answer 
+  attributes: 
+    question_id: "893555569"
+    created_at: 2008-08-16 20:30:27
+    updated_at: 2008-08-16 20:30:27
+    text: |-
+      Our philosophy is simple. We believe that meat should be produced using sustainable and organic methods that are both good for you and good for our environment.
+      It's healthy
+      
+      Organic meat is good for you. Organic food contains higher levels of essential minerals and antioxidants. They don't contain unnecessary nasty additives and you will not find chemical pesticide residues in our animals.
+      
+      Our organic livestock is grass fed this means it has higher levels of omega-3-fatty acids.
+      Animal Welfare
+      
+      Animal Welfare is top of our list of priorities. All of our animals are slaughtered either on the farm or at the small local abattoir 5 minutes down the road from us. This ensures our animals only ever have short journeys. Compare this to some conventional livestock that may travel the length of the country to be slaughtered at a supermarket's favoured abattoir.
+      
+      When we come to slaughter the process is as quick and painless as possible using a small abattoir where stockmanship is of the highest standard. A knock-on effect of this is that the animal is less stressed which avoids giving the animals a rush of adrenaline that could taint the flavour of the meat.
+      
+      This isn't rocket science: an animal that has led a happy life produces great meat.
+      The Environment
+      
+      We care for the beautiful landscape in which we are lucky enough to live and work. Farming organically means that we work with the land to get the best out of it, not just this year but for years to come. 'Organic farming is better for wildlife' Soil Association, five reasons to eat organic.
+      Organic
+      
+      All our meat is organic this means it is reared to organic standards as laid down by organisations such as the Soil Association. Well Hung Meat is certified by the Soil Association, the Soil Association inspects us every year to ensure we are meeting the stringent regulations.
+      
+      The philosophy behind organic livestock farming is to prevent disease by promoting health. An appropriate diet, lower stocking levels, rotations, high welfare standards and reduced stress all help the animals to be healthier and therefore more resistant to disease. For example Anthony from the Flete estate has never had to worm his animals because they are regularly rotated onto new pasture and kept under low stress conditions, this helps their immunity to build up.
+    id: "12"
+    producer_id: "4"
+  attributes_cache: {}
+
+- !ruby/object:Answer 
+  attributes: 
+    question_id: "691129074"
+    created_at: 2008-08-16 22:04:17
+    updated_at: 2008-08-16 22:04:17
+    text: "Casa de l\xE2\x80\x99Oli has found all five ingredients in the rocky Catalonian landscape, terraced by the Moors and providing the ideal environment to produce the smoothest, sweetest, olive oils in the world.\r\n\
+      \r\n\
+      Casa de l\xE2\x80\x99Oli is a family business growing olives and producing fine quality olive oils. Based in Southern Catalonia and in Suffolk, we are personally involved in bringing our superb products to your table. Good olive oil imparts a wonderful flavour to foods and we produce only the best - extra virgin olive oils.\r\n\
+      \r\n\
+      The local Catalan people have taught us a great deal about the traditional ways of successfully cultivating olive trees and how to maintain all the nutrients, flavour, aroma and taste of the olive juice. Our premium olives are crushed within 24 hours after harvest and processed without heat to give a delicious, full flavoured oil, with exquisite taste.\r\n\
+      \r\n"
+    id: "13"
+    producer_id: "5"
+  attributes_cache: {}
+
+- !ruby/object:Answer 
+  attributes: 
+    question_id: "756776720"
+    created_at: 2008-08-16 22:04:19
+    updated_at: 2008-08-16 22:04:19
+    text: "The excellence of any oil is based on the quality of the olives \xE2\x80\x93 and careful selection is very important to Casa de l\xE2\x80\x99Oli.\r\n\
+      \r\n\
+      From our own olives, farmed on the banks of the Ebro Valley, we produce an unfiltered extra virgin olive oil. Our olives are pressed once, in a restored stone mill, to give unfiltered olive oil which is cloudy, with a little sediment, but has more body and preserves all the different flavours of the olives.\r\n\
+      \r\n\
+      Our products include oak smoked and rosemary-infused extra virgin olive oils, vinagrette dressing, black and green olive pastes and even olive jam.\r\n\
+      \r\n\
+      We also sell a fragrant, fruity sweet oil produced by the Su\xC3\xB1er family, who farm close to our own olive groves. They have been producing a high quality single estate olive oil since 1934."
+    id: "14"
+    producer_id: "5"
+  attributes_cache: {}
+
+- !ruby/object:Answer 
+  attributes: 
+    question_id: "893555569"
+    created_at: 2008-08-16 22:04:19
+    updated_at: 2008-08-16 22:04:19
+    text: "In Southern Catalonia where Casa de l\xE2\x80\x99Oli farms, the olives include the revered Arbequina and Empletre varieties, considered the kings of fruity sweet olives. They are characterized by their hint of apples, the scent of freshly cut grass and an after taste of green almonds, and their oils are highly prized, often being used as premium blending oils by other European producers."
+    id: "15"
+    producer_id: "5"
+  attributes_cache: {}
+

@@ -1,0 +1,229 @@
+--- 
+- !ruby/object:Image 
+  attributes: 
+    section_type: Answer
+    size: "20200"
+    content_type: image/jpeg
+    section_id: "1"
+    id: "1"
+    height: 
+    filename: mushroom.jpg
+    width: 
+  attributes_cache: {}
+
+- !ruby/object:Image 
+  attributes: 
+    section_type: Answer
+    size: "25823"
+    content_type: image/jpeg
+    section_id: "2"
+    id: "2"
+    height: 
+    filename: eggs.jpg
+    width: 
+  attributes_cache: {}
+
+- !ruby/object:Image 
+  attributes: 
+    section_type: Answer
+    size: "30533"
+    content_type: image/jpeg
+    section_id: "3"
+    id: "3"
+    height: 
+    filename: calf.jpg
+    width: 
+  attributes_cache: {}
+
+- !ruby/object:Image 
+  attributes: 
+    section_type: Producer
+    size: "41493"
+    content_type: image/jpeg
+    section_id: 
+    id: "4"
+    height: "160"
+    filename: moremixedveg.jpg
+    width: "240"
+  attributes_cache: {}
+
+- !ruby/object:Image 
+  attributes: 
+    section_type: Producer
+    size: "26596"
+    content_type: image/jpeg
+    section_id: 
+    id: "5"
+    height: "160"
+    filename: moremixedveg.jpg
+    width: "240"
+  attributes_cache: {}
+
+- !ruby/object:Image 
+  attributes: 
+    section_type: Producer
+    size: "30533"
+    content_type: image/jpeg
+    section_id: "1"
+    id: "6"
+    height: "160"
+    filename: calf.jpg
+    width: "240"
+  attributes_cache: {}
+
+- !ruby/object:Image 
+  attributes: 
+    section_type: Producer
+    size: "25823"
+    content_type: image/jpeg
+    section_id: "2"
+    id: "7"
+    height: "160"
+    filename: eggs.jpg
+    width: "240"
+  attributes_cache: {}
+
+- !ruby/object:Image 
+  attributes: 
+    section_type: Answer
+    size: "11878"
+    content_type: image/jpeg
+    section_id: "7"
+    id: "8"
+    height: "160"
+    filename: farm.jpg
+    width: "240"
+  attributes_cache: {}
+
+- !ruby/object:Image 
+  attributes: 
+    section_type: Answer
+    size: "5888"
+    content_type: image/jpeg
+    section_id: "8"
+    id: "9"
+    height: "160"
+    filename: cheese.jpg
+    width: "240"
+  attributes_cache: {}
+
+- !ruby/object:Image 
+  attributes: 
+    section_type: Answer
+    size: "16757"
+    content_type: image/jpeg
+    section_id: "9"
+    id: "10"
+    height: "160"
+    filename: goat7.jpg
+    width: "240"
+  attributes_cache: {}
+
+- !ruby/object:Image 
+  attributes: 
+    section_type: Producer
+    size: "7528"
+    content_type: image/jpeg
+    section_id: "3"
+    id: "11"
+    height: "160"
+    filename: goat6.jpg
+    width: "240"
+  attributes_cache: {}
+
+- !ruby/object:Image 
+  attributes: 
+    section_type: Answer
+    size: "9481"
+    content_type: image/jpeg
+    section_id: "10"
+    id: "12"
+    height: "160"
+    filename: cowes.jpg
+    width: "240"
+  attributes_cache: {}
+
+- !ruby/object:Image 
+  attributes: 
+    section_type: Answer
+    size: "12436"
+    content_type: image/jpeg
+    section_id: "11"
+    id: "13"
+    height: "160"
+    filename: MeatBox.JPG
+    width: "240"
+  attributes_cache: {}
+
+- !ruby/object:Image 
+  attributes: 
+    section_type: Answer
+    size: "16204"
+    content_type: image/jpeg
+    section_id: "12"
+    id: "14"
+    height: "160"
+    filename: organiclambandbeef.jpg
+    width: "240"
+  attributes_cache: {}
+
+- !ruby/object:Image 
+  attributes: 
+    section_type: Producer
+    size: "10359"
+    content_type: image/jpeg
+    section_id: "4"
+    id: "15"
+    height: "160"
+    filename: sheeponcliffcrop.jpg
+    width: "240"
+  attributes_cache: {}
+
+- !ruby/object:Image 
+  attributes: 
+    section_type: Answer
+    size: "11553"
+    content_type: image/jpeg
+    section_id: "13"
+    id: "16"
+    height: "160"
+    filename: homepage.jpg
+    width: "240"
+  attributes_cache: {}
+
+- !ruby/object:Image 
+  attributes: 
+    section_type: Answer
+    size: "12788"
+    content_type: image/jpeg
+    section_id: "14"
+    id: "17"
+    height: "160"
+    filename: salad-pour.jpg
+    width: "240"
+  attributes_cache: {}
+
+- !ruby/object:Image 
+  attributes: 
+    section_type: Answer
+    size: "12788"
+    content_type: image/jpeg
+    section_id: "15"
+    id: "18"
+    height: "160"
+    filename: salad-pour.jpg
+    width: "240"
+  attributes_cache: {}
+
+- !ruby/object:Image 
+  attributes: 
+    section_type: Producer
+    size: "10132"
+    content_type: image/jpeg
+    section_id: "5"
+    id: "19"
+    height: "160"
+    filename: about.jpg
+    width: "240"
+  attributes_cache: {}
+
