@@ -15,9 +15,13 @@ namespace :lockup do
   desc 'Load models from saved yaml'
   task :load => :environment do
     @tables.each do |t|
-      puts 'Loading up models'
-      models = open(storage_path(t)){ YAML.load(f.read) }
-      models.each{|p| p.save! }
+      dummy = eval(t.singularize.capitalize).find(:first)
+      puts "Loading up #{t}"
+      models = open(storage_path(t)){ |f| YAML.load(f.read) }
+      models.each do |p| 
+        p2 = p.clone
+        puts "#{p2.errors.full_messages} for #{p.id}"  unless(p2.save)
+      end
     end
   end
 
