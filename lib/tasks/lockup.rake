@@ -15,12 +15,12 @@ namespace :lockup do
   desc 'Load models from saved yaml'
   task :load => :environment do
     @tables.each do |t|
-      dummy = eval(t.singularize.capitalize).find(:first)
       puts "Loading up #{t}"
+      eval(t.singularize.capitalize).exists?(1) #Dirty hack that seems to force load the model
       models = open(storage_path(t)){ |f| YAML.load(f.read) }
       models.each do |p| 
-        p2 = p.clone
-        puts "#{p2.errors.full_messages} for #{p.id}"  unless(p2.save)
+        p = p.clone unless eval(t.singularize.capitalize).exists?(p.id)
+        puts "#{p.errors.full_messages} for #{p.id}"  unless(p.save)
       end
     end
   end

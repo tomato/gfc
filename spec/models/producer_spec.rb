@@ -76,7 +76,7 @@ describe Producer do
 
   def valid_producer_attributes
     {
-      "name"=>"Toms tomatoes", 
+      "name"=>"Toms tomatoes x", 
       "address"=>"The village hall\r\nWitham\r\nEssex\r\nCM8 3df", 
       "created_at"=>"Mon Aug 11 08:44:51 +0100 2008", 
       "updated_at"=>"Mon Aug 11 08:44:51 +0100 2008", 
