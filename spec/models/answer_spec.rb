@@ -10,6 +10,13 @@ describe Answer do
     @answer.should be_valid
   end
 
+  it "should error if text length is below 100" do
+     @answer.attributes = valid_answer_attributes.with(:text => "a"*99)
+     @answer.should_not be_valid
+     @answer.should have(1).error_on(:text)
+     @answer.errors[:text].should include "is too short"
+  end
+
   private
 
   def valid_answer_attributes

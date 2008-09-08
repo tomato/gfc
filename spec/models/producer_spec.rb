@@ -1,8 +1,15 @@
 require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
+require File.expand_path(File.dirname(__FILE__) + '/../factories')
 
 describe Producer do
   before(:each) do
     @producer = Producer.new
+  end
+
+  after(:each) do
+    Answer.destroy_all
+    Producer.destroy_all
+    Question.destroy_all
   end
 
   it do
@@ -18,7 +25,12 @@ describe Producer do
     @producer.should have_at_least(1).error_on(:name)
   end
 
-  it "should error if name is not unique" 
+  it "should error if name is not unique" do
+    p = Factory(:producer)
+    p = p.clone
+    p.should_not be_valid
+    p.errors[:name].should include "has already been taken"
+  end
 
   it "should error if email is not valid" do
     validate_producer_with_invalid_attrib :email => "grrrr"
@@ -60,13 +72,33 @@ describe Producer do
      @producer.errors[:summary].should include "is too long"
   end
 
-  it "should return the correct number of Producers"
-  it "should return an error if a negative amount of Producers are requested"
-  it "should create a default answer for each mandatory answer"
-  it "should associate any answers passed to create answers"
-  it "should update any answers passed in update answers"
-  it "should not update answers not passed to update_answers"
-  it "should return the associated image"
+  it "should return the correct number of Producers" do 
+   Factory(:producer, :name => "Producer 1") 
+   Factory(:producer, :name => "Producer 2") 
+   Factory(:producer, :name => "Producer 3") 
+   Producer.get(2).should have(2).producers
+  end
+
+  it "should create a default answer for each mandatory answer" do
+    Factory(:question, :required => true)
+    Factory(:question, :required => false)
+    Producer.new.create_default_answers.should have(1).answers
+  end
+
+  it "should associate any answers passed to create answers" do
+    answers = [{:text => "lala"},{:text => "po"}] 
+    Producer.new.create_answers(answers).should have(2).answers
+  end
+
+  ##it "should update any answers passed in update answers" do
+  #  p = Factory(:producer)
+  #  q = Factory(:question)
+  #  p.create_answers([{:text => "po"*100, :question_id => q.id}])
+  #  p.answers.should have(1).answer
+  #  a = p.answers.find(:first)
+  #  Producer.find(:first).update_answers([a.id => {:text => "la"*100}])
+  #  p.answers[0].text.should include("lala")
+  #end
 
   it "should return the noimage image if no images are associated" do
     @producer.image_path.should eql("noimage.jpg")

@@ -18,7 +18,7 @@ class Producer < ActiveRecord::Base
   end
 
   def create_default_answers
-    Question.find(:all).each do |q|
+    Question.find(:all, :conditions => {:required => true}).each do |q|
       self.answers << Answer.new(:producer_id => self.id,
                                      :question_id => q.id)
     end
