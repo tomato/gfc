@@ -48,4 +48,9 @@
       %label Telephone Number
       = form.text_field :tel 
     .spacer
+  %fieldset
+    %legend Admin?
+    %p
+      %label Status
+      = form.select :status, %w{draft ready active}
   .submission= submit_tag 
