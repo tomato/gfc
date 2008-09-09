@@ -79,6 +79,14 @@ describe Producer do
    Producer.get(2).should have(2).producers
   end
 
+  it "should only return active producers" do
+    Factory(:producer, :name => "Name 3", :status => "draft")
+    Factory(:producer, :name => "Name 2",:status => "ready")
+    Factory(:producer, :name => "Name 1", :status => "active")
+    Producer.get(10).should have(1).producers
+    Producer.get(1)[0].name.should eql("Name 1")
+  end
+
   it "should create a default answer for each mandatory answer" do
     Factory(:question, :required => true)
     Factory(:question, :required => false)

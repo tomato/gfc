@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 9) do
+ActiveRecord::Schema.define(:version => 20080909072521) do
 
   create_table "answers", :force => true do |t|
     t.text     "text"
@@ -30,14 +30,15 @@ ActiveRecord::Schema.define(:version => 9) do
   end
 
   create_table "producers", :force => true do |t|
-    t.string   "name",                      :null => false
-    t.string   "summary",                   :null => false
+    t.string   "name",                                           :null => false
+    t.string   "summary",                                        :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "address",    :limit => 500
     t.string   "website"
     t.string   "email"
     t.string   "tel"
+    t.string   "status",                    :default => "draft", :null => false
   end
 
   create_table "questions", :force => true do |t|

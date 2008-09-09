@@ -13,6 +13,7 @@
     id: "1"
     website: www.tomstomatoes.com
     summary: growing ripe red juic tomatoes
+    status: active
     email: tom@tomstomatoes.com
   attributes_cache: {}
 
@@ -28,6 +29,7 @@
     id: "2"
     website: http://www.fishweekly.com
     summary: Finest fish from Dorset .
+    status: active
     email: tom@fishweekly.com
   attributes_cache: {}
 
@@ -46,6 +48,7 @@
     id: "3"
     website: http://www.alletdairygoats.co.uk
     summary: A family business delivering quality fresh goats' milk products
+    status: active
     email: "info@alletdairygoats.co.uk "
   attributes_cache: {}
 
@@ -66,6 +69,7 @@
     id: "4"
     website: http://www.wellhungmeat.com
     summary: The Most Delicious Organic Meat imaginable
+    status: active
     email: hello@wellhungmeat.com
   attributes_cache: {}
 
@@ -85,6 +89,7 @@
     summary: |-
       We are passionate about our olives         
       and the olive oil we create
+    status: active
     email: olive.oil@casadeloli.com
   attributes_cache: {}
 

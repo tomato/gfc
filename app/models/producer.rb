@@ -14,7 +14,7 @@ class Producer < ActiveRecord::Base
   validates_length_of :name, :in => 3..50
 
   def Producer.get(num)
-    Producer.find(:all, :limit => num)
+    Producer.find(:all, :limit => num, :conditions => {:status => "active"})
   end
 
   def create_default_answers
