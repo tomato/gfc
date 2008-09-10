@@ -1,5 +1,5 @@
 %h2= @producer.name
-- i=0; for p in @producer.answers 
-  %p{:class => "section#{c(i+=1)}"} 
+- @producer.answers.each_with_index do |p,i|
+  %p{:class => flip_flop(i)} 
     =image_tag p.image_path
     =h(p.text)

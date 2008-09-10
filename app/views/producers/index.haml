@@ -1,9 +1,8 @@
 #selectionbox
   - @producers.each_with_index do |producer,i|
-    - cell_class = "Cell" + (i+1).to_s
-    %div{:class => "SelectionImage #{cell_class}"}
+    %div{:class => "SelectionImage #{grid(i)}"}
       = link_to(image_tag(producer.image_path),producer_path(producer.id))
-    %div{:class => "SelectionText #{cell_class}"}
+    %div{:class => "SelectionText #{grid(i)}"}
       %strong= producer.name
       %br
       =producer.summary
