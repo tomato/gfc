@@ -1,7 +1,11 @@
 class ProducersController < ApplicationController
 
   def index
-    @producers = Producer.get(6)
+    if(params[:status])
+      @producers = Producer.get(6, params[:status])
+    else
+      @producers = Producer.get(6)
+    end
   end
 
   def show
