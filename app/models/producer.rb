@@ -4,6 +4,7 @@ class Producer < ActiveRecord::Base
   
   has_many :answers
   has_one :image, :as => :section
+  belongs_to :user
   
   validates_presence_of :name, :summary, :email, :tel, :address
   validates_uniqueness_of :name
