@@ -19,10 +19,14 @@ class ProducersController < ApplicationController
   end
 
   def create
-    @producer = Producer.new(params[:producer])
-    @producer.create_answers(params[:answer])
-
-    if(@producer.save)
+    if(Producer.transaction do
+        @producer = Producer.new(params[:producer])
+        @producer.create_answers(params[:answer])
+        @producer.create_user(params[:user].merge(
+          {:login => @producer.name,:email => @producer.email})) 
+        @producer.save!
+        end
+      )
       flash[:notice] = 'Your details have been saved'
       redirect_to(@producer)
     else
@@ -36,6 +40,8 @@ class ProducersController < ApplicationController
     @producer = Producer.find(params[:id])
     @producer.attributes = params[:producer]
     @producer.update_answers(params[:answer])
+    @producer.update_user(params[:user].merge(
+        {:login => @producer.name,:email => @producer.email})) 
 
     if(@producer.save)
       flash[:notice] = "You've been updated"

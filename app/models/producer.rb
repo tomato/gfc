@@ -8,7 +8,7 @@ class Producer < ActiveRecord::Base
   
   validates_presence_of :name, :summary, :email, :tel, :address
   validates_uniqueness_of :name
-  validates_associated :answers, :image
+  validates_associated :answers, :image, :user
   validates_format_of :email, :with => /[\w\-\.]+@[\w\-]+\.[a-z\.]{2,6}/
   validates_format_of :website, :with => /www\.\w+\.[\w\.]{2,6}/
   validates_length_of :summary, :in => 20..100
@@ -35,5 +35,16 @@ class Producer < ActiveRecord::Base
       answer.attributes = value 
       answer.save!
     end
+  end
+
+  def create_user(user_params)
+    user = User.new(user_params)
+    user.save!
+    self.user = user
+  end
+
+  def update_user(user_params)
+    self.user.attributes = user_params
+    user.save!
   end
 end

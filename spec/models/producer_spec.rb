@@ -10,6 +10,7 @@ describe Producer do
     Answer.destroy_all
     Producer.destroy_all
     Question.destroy_all
+    User.destroy_all
   end
 
   it do
@@ -110,6 +111,16 @@ describe Producer do
 
   it "should return the noimage image if no images are associated" do
     @producer.image_path.should eql("noimage.jpg")
+  end
+
+  it "should associate a new user" do
+    User.destroy_all
+    @producer.attributes = valid_producer_attributes
+    @producer.create_user({:login => "tom", :email => "tom@tomhowlett.com",
+                          :password => "12345", :password_confirmation => "12345"})
+    @producer.save!
+    User.find(:all).should have(1).user
+    @producer.user_id.should eql(User.find(:first).id)
   end
 
   private

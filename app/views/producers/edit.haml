@@ -53,4 +53,11 @@
     %p
       %label Status
       = form.select :status, %w{draft ready active}
+    - fields_for :user do |u|
+      %p
+        %label Login Password
+        = u.password_field :password
+      %p
+        %label Confirm Password
+        = u.password_field :password_confirmation
   .submission= submit_tag 
