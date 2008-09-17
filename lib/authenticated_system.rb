@@ -34,6 +34,10 @@ module AuthenticatedSystem
       logged_in?
     end
 
+    def is_admin?
+      current_user.login == 'admin'
+    end
+
     # Filter method to enforce a login requirement.
     #
     # To require logins for all actions, use this in your controllers:

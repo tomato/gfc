@@ -1,7 +1,5 @@
 class ProducersController < ApplicationController
 
-  before_filter :login_required, :except => [:index, :show]
-
   def index
     if(params[:status])
       @producers = Producer.get(6, params[:status])
@@ -40,6 +38,7 @@ class ProducersController < ApplicationController
 
   def update
     @producer = Producer.find(params[:id])
+    login_required
     @producer.attributes = params[:producer]
     @producer.update_answers(params[:answer])
     @producer.update_user(params[:user].merge(
@@ -55,5 +54,10 @@ class ProducersController < ApplicationController
 
   def edit
     @producer = Producer.find(params[:id])
+    login_required
+  end
+
+  def authorized?
+    is_admin? || (@producer && @producer.user == current_user)
   end
 end
