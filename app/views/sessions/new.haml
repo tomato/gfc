@@ -1,0 +1,12 @@
+- form_tag session_path do |f|
+  %p
+    %label Login
+    = text_field_tag 'login'
+  %p
+    %label Password
+    = password_field_tag 'password' 
+  %p
+    %label Remember me:
+    = check_box_tag 'remember me'
+  %p
+    .submission= submit_tag 'login'

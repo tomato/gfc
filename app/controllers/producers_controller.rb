@@ -1,5 +1,7 @@
 class ProducersController < ApplicationController
 
+  before_filter :login_required, :except => [:index, :show]
+
   def index
     if(params[:status])
       @producers = Producer.get(6, params[:status])
