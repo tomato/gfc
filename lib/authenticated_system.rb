@@ -1,4 +1,10 @@
 module AuthenticatedSystem
+  public
+    
+  def is_admin?
+    !!current_user && current_user.login == 'admin'
+  end
+  
   protected
     # Returns true or false if the user is logged in.
     # Preloads @current_user with the user model if they're logged in.
@@ -34,9 +40,6 @@ module AuthenticatedSystem
       logged_in?
     end
 
-    def is_admin?
-      current_user.login == 'admin'
-    end
 
     # Filter method to enforce a login requirement.
     #

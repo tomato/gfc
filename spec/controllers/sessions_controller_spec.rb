@@ -11,6 +11,13 @@ describe SessionsController do
     post :create, :login => 'quentin', :password => 'test'
     session[:user_id].should_not be_nil
     response.should be_redirect
+    controller.send(:logged_in?).should be_true
+  end
+
+  it 'logins as admin' do
+    post :create, :login => 'admin', :password => 'test'
+    controller.send(:logged_in?).should be_true
+    controller.send(:is_admin?).should be_true
   end
   
   it 'fails login and does not redirect' do

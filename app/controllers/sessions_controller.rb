@@ -16,6 +16,7 @@ class SessionsController < ApplicationController
       flash[:notice] = "Logged in successfully"
     else
       render :action => 'new'
+      flash[:notice] = "Logged in failed"
     end
   end
 

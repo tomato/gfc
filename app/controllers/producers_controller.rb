@@ -1,4 +1,5 @@
 class ProducersController < ApplicationController
+  helper_method :available_stati
 
   def index
     if(params[:status])
@@ -60,4 +61,14 @@ class ProducersController < ApplicationController
   def authorized?
     is_admin? || (@producer && @producer.user == current_user)
   end
+  
+  def available_stati
+    if is_admin?
+      %w{draft ready active}
+    else
+      %w{draft ready}
+    end
+  end
+
+  
 end

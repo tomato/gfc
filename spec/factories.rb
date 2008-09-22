@@ -23,3 +23,18 @@ Factory.define :question do |f|
   f.required true
 end
 
+Factory.define :admin, :class => :user do |u|
+  u.login 'admin'
+  u.password '12345'
+  u.password_confirmation '12345'
+  u.email 'tom@tomhowlett.com'
+end
+
+Factory.define :tom_thumb, :class => :user do |u|
+  u.login 'tom thumb'
+  u.password '12345'
+  u.password_confirmation '12345'
+  u.email 'tom@tomhowlett.com'
+end
+
+
