@@ -2,7 +2,7 @@ class ProducersController < ApplicationController
   helper_method :available_stati
 
   def index
-    if(params[:status])
+    if(params[:status] && authorized?)
       @producers = Producer.get(6, params[:status])
     else
       @producers = Producer.get(6)

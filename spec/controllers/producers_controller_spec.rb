@@ -50,10 +50,16 @@ describe ProducersController, "Handling index" do
     response.should render_template :index
   end
 
-  it "should render index with draft producers" do
-    Producer.should_receive(:get).with(6, :draft).and_return(@producers)
+  it "should render index with active producers if not admin" do
+    Producer.should_receive(:get).with(6).and_return(@producers)
     get "index", :status => :draft
     response.should render_template :index
   end
     
+  it "should render index with draft producers if admin" do
+    stub_login_as('admin') 
+    Producer.should_receive(:get).with(6, :draft).and_return(@producers)
+    get "index", :status => :draft
+    response.should render_template :index
+  end
 end

@@ -9,4 +9,7 @@ module ApplicationHelper
     "Cell#{i+1}"
   end
 
+  def login_label
+    "<div class='login'>Hello #{current_user.login}</div>" if current_user 
+  end
 end

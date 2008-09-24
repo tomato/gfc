@@ -5,6 +5,8 @@
     = stylesheet_link_tag 'gfc' 
     = javascript_include_tag "jquery", "browse" 
   %body
-    #top= image_tag "gfclogo.jpg"
+    #top 
+      =image_tag "gfclogo.jpg"
+      =login_label
     #main
       = yield :layout 

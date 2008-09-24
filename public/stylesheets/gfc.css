@@ -45,6 +45,11 @@ div#top
   background-repeat: repeat-x;
 }
 
+div#top img
+{
+  float:left;
+}
+
 div#main
 {
   float:right;
@@ -211,4 +216,9 @@ textarea.summary
 textarea.text
 {
   height:10em;
+}
+
+div.login
+{
+  float:right;
 }
