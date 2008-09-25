@@ -3,6 +3,7 @@ class Producer < ActiveRecord::Base
   include ImageHelpers
   
   has_many :answers
+  has_many :products
   has_one :image, :as => :section
   belongs_to :user
   

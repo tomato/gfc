@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20080915072402) do
+ActiveRecord::Schema.define(:version => 20080925065830) do
 
   create_table "answers", :force => true do |t|
     t.text     "text"
@@ -40,6 +40,15 @@ ActiveRecord::Schema.define(:version => 20080915072402) do
     t.string   "tel"
     t.string   "status",                    :default => "draft", :null => false
     t.integer  "user_id",    :limit => 11
+  end
+
+  create_table "products", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "price",       :limit => 10, :precision => 10, :scale => 0
+    t.integer  "producer_id", :limit => 11,                                :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "questions", :force => true do |t|
