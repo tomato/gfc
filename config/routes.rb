@@ -1,7 +1,4 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :users
-
-  map.resource :session
 
   # The priority is based upon order of creation: first created -> highest priority.
 
@@ -14,7 +11,8 @@ ActionController::Routing::Routes.draw do |map|
   # This route can be invoked with purchase_url(:id => product.id)
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
-   map.resources :producers , :images
+  map.resources :producers, :has_many => :products
+  map.resources :images, :users, :session
 
   # Sample resource route with options:
   #   map.resources :products, :member => { :short => :get, :toggle => :post }, :collection => { :sold => :get }
