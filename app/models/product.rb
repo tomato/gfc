@@ -1,3 +1,6 @@
 class Product < ActiveRecord::Base
-  belongs_to: :producer
+  include ImageHelpers
+  
+  belongs_to :producer
+  has_one :image, :as => :section
 end

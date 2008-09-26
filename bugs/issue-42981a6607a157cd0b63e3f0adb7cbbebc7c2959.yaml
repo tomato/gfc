@@ -1,0 +1,18 @@
+--- !ditz.rubyforge.org,2008-03-06/issue 
+title: Allow products and or variation to be 'ready to eat'  or 'still growing'
+desc: Ready to eat products will be available to buy, admin should be able to set status on whole product or just certain variations
+type: :feature
+component: gfc
+release: 
+reporter: Tom <tom@tomhowlett.com>
+status: :unstarted
+disposition: 
+creation_time: 2008-09-25 17:50:05.239051 Z
+references: []
+
+id: 42981a6607a157cd0b63e3f0adb7cbbebc7c2959
+log_events: 
+- - 2008-09-25 17:50:06.973695 Z
+  - Tom <tom@tomhowlett.com>
+  - created
+  - ""

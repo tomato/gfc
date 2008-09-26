@@ -1,0 +1,19 @@
+- form_for [:producer, @product] , :html => { :multipart => true } do |form| 
+  = error_messages_for :product 
+  %fieldset
+    %legend Product?
+    %p
+      %label Name
+      = form.text_field :name
+    %p
+      %label
+        Tell us about the product. How is it made? Where is it from?
+        How tasty is it?
+      = form.text_area :description, :class => "summary" 
+    %p
+      %label
+        = image_tag @product.image_path if @product.image 
+        Upload an image of the product or perhaps a picture of it growing
+      = form.file_field :uploaded_data 
+    .spacer
+  .submission= submit_tag 

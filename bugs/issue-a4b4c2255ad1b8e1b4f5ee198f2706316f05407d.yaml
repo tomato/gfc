@@ -1,0 +1,18 @@
+--- !ditz.rubyforge.org,2008-03-06/issue 
+title: Add validation to product
+desc: ""
+type: :task
+component: gfc
+release: 
+reporter: Tom <tom@tomhowlett.com>
+status: :unstarted
+disposition: 
+creation_time: 2008-09-26 07:32:43.948680 Z
+references: []
+
+id: a4b4c2255ad1b8e1b4f5ee198f2706316f05407d
+log_events: 
+- - 2008-09-26 07:32:45.049989 Z
+  - Tom <tom@tomhowlett.com>
+  - created
+  - ""

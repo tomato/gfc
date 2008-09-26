@@ -1,0 +1,18 @@
+--- !ditz.rubyforge.org,2008-03-06/issue 
+title: Add variants to products
+desc: Should allow for variation in weight and price. What about other variations? Variation could be free text for example 500g 250g, boned, cherry flavour, lime falvour etc then each variation will have a price
+type: :feature
+component: gfc
+release: 
+reporter: Tom <tom@tomhowlett.com>
+status: :unstarted
+disposition: 
+creation_time: 2008-09-25 17:46:48.271846 Z
+references: []
+
+id: 7d098ae7a75aff3462fd108992ae94dc263d4a32
+log_events: 
+- - 2008-09-25 17:46:50.487002 Z
+  - Tom <tom@tomhowlett.com>
+  - created
+  - ""

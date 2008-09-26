@@ -1,0 +1,18 @@
+--- !ditz.rubyforge.org,2008-03-06/issue 
+title: Sort out validation of producers child models, currently throw an exception
+desc: ""
+type: :bugfix
+component: gfc
+release: 
+reporter: Tom <tom@tomhowlett.com>
+status: :unstarted
+disposition: 
+creation_time: 2008-09-26 07:32:14.804656 Z
+references: []
+
+id: 93170d892f6683eb8aadc2d3b0d8efd5d1162342
+log_events: 
+- - 2008-09-26 07:32:17.780613 Z
+  - Tom <tom@tomhowlett.com>
+  - created
+  - ""

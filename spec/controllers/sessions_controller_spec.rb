@@ -15,7 +15,7 @@ describe SessionsController do
   end
 
   it 'logins as admin' do
-    post :create, :login => 'admin', :password => 'test'
+    post :create, :login => 'Admin', :password => 'test'
     controller.send(:logged_in?).should be_true
     controller.send(:is_admin?).should be_true
   end
