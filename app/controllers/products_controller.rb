@@ -7,6 +7,12 @@ class ProductsController < ApplicationController
   end
 
   def create
+    @producer.products << Product.new(params[:product])
+    if(@producer.save)
+      redirect_to producer_products_url(@producer)
+    else
+      render :action => :edit
+    end
   end
 
   def edit
@@ -19,6 +25,7 @@ class ProductsController < ApplicationController
   end
 
   def index
+    @products = Product.find(:all)
   end
 
   private

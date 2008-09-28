@@ -2,7 +2,7 @@ module AuthenticatedSystem
   public
     
   def is_admin?
-    current_user && current_user.login == 'Admin'
+    current_user && current_user.login.capitalize == 'Admin'
   end
   
   # Accesses the current user from the session. 
