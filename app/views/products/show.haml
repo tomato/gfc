@@ -1,0 +1,7 @@
+
+%h2= @product.name
+%p{:class => flip_flop(0)} 
+  =image_tag @product.image_path
+  =h(@product.description)
+=link_to 'Edit', edit_producer_product_path(@producer, @product)
+=link_to 'Destroy', [@producer, @product], :confirm => 'Are you sure?', :method => :delete

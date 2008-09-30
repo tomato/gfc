@@ -26,12 +26,12 @@ describe SessionsController do
     response.should be_success
   end
 
-  it 'logs out' do
-    login_as :quentin
-    get :destroy
-    session[:user_id].should be_nil
-    response.should be_redirect
-  end
+#  it 'logs out' do
+#    login_as :quentin
+#    get :destroy
+#    session[:user_id].should be_nil
+#    response.should be_redirect
+#  end
 
   it 'remembers me' do
     post :create, :login => 'quentin', :password => 'test', :remember_me => "1"
@@ -43,11 +43,11 @@ describe SessionsController do
     response.cookies["auth_token"].should be_nil
   end
 
-  it 'deletes token on logout' do
-    login_as :quentin
-    get :destroy
-    response.cookies["auth_token"].should == []
-  end
+  #it 'deletes token on logout' do
+  #  login_as :quentin
+  #  get :destroy
+  #  response.cookies["auth_token"].should == []
+  #end
 
   it 'logs in with cookie' do
     users(:quentin).remember_me

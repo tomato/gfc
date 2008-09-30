@@ -8,24 +8,29 @@ class ProductsController < ApplicationController
 
   def create
     @producer.products << Product.new(params[:product])
-    if(@producer.save)
-      redirect_to producer_products_url(@producer)
-    else
-      render :action => :edit
-    end
+    if_save { @producer.save }
   end
 
   def edit
+    @product = Product.find(params[:id])
   end
 
   def update
+    find_product
+    if_save {@product.update_attributes(params[:product])}
   end
 
   def destroy
+    find_product
+    if_save(:view){ @product.destroy}
   end
 
   def index
-    @products = Product.find(:all)
+    find_products
+  end
+
+  def show
+    find_product
   end
 
   private
@@ -33,6 +38,22 @@ class ProductsController < ApplicationController
     @producer_id = params[:producer_id]
     return(redirect_to(producers_url)) unless @producer_id
     @producer = Producer.find(@producer_id)
+  end
+
+  def find_product
+    @product = Product.find(params[:id])
+  end
+
+  def find_products
+    @products = Product.find(:all)
+  end
+
+  def if_save(action = :edit)
+    if(yield)
+       redirect_to producer_products_url(@producer)
+    else
+      render action
+    end
   end
     
 
