@@ -1,4 +1,5 @@
 require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
+include AuthenticatedTestHelper
 
 describe ProductsController do
 
@@ -7,10 +8,12 @@ describe ProductsController do
     @product = mock_model(Product)
     @producer.stub!(:products).and_return([])
     @producer.stub!(:save).and_return(true)
+    Producer.stub!(:find).and_return(@producer)
+    @producer.stub!(:user).and_return stub_login_as('admin')
   end
 
   it "should respond to new" do
-    get :new
+    get :new, :producer_id => 1
     response.should render_template :edit
   end
 
