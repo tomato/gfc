@@ -12,4 +12,5 @@ module ApplicationHelper
   def login_label
     "<div class='login'>Hello #{current_user.login}</div>" if current_user 
   end
+
 end

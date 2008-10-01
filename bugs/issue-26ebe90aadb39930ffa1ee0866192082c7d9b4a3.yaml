@@ -1,0 +1,18 @@
+--- !ditz.rubyforge.org,2008-03-06/issue 
+title: add security to products
+desc: ""
+type: :task
+component: gfc
+release: 
+reporter: Tom <tom@tomhowlett.com>
+status: :unstarted
+disposition: 
+creation_time: 2008-09-30 18:38:47.750839 Z
+references: []
+
+id: 26ebe90aadb39930ffa1ee0866192082c7d9b4a3
+log_events: 
+- - 2008-09-30 18:38:49.748064 Z
+  - Tom <tom@tomhowlett.com>
+  - created
+  - ""

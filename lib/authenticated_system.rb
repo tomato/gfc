@@ -5,6 +5,9 @@ module AuthenticatedSystem
     current_user && current_user.login.capitalize == 'Admin'
   end
   
+  def can_edit?
+    is_admin? || (@producer && @producer.user == current_user)
+  end
   # Accesses the current user from the session. 
   # Future calls avoid the database because nil is not equal to false.
   def current_user

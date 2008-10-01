@@ -59,7 +59,7 @@ class ProducersController < ApplicationController
   end
 
   def authorized?
-    is_admin? || (@producer && @producer.user == current_user)
+    can_edit?
   end
   
   def available_stati

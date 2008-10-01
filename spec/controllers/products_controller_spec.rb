@@ -1,6 +1,6 @@
 require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 
-describe [ProducersController,ProductsController] do
+describe ProductsController do
 
   before do
     @producer = mock_model(Producer)

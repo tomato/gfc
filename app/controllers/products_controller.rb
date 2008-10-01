@@ -1,5 +1,7 @@
 class ProductsController < ApplicationController
+  helper_method :can_edit?
   before_filter :find_producer
+  before_filter :login_required, :except => [:index, :show]
 
   def new
     @product = Product.new
@@ -56,5 +58,7 @@ class ProductsController < ApplicationController
     end
   end
     
-
+  def authorized?
+    can_edit?
+  end
 end
