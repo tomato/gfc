@@ -10,7 +10,12 @@ module ApplicationHelper
   end
 
   def login_label
-    "<div class='login'>Hello #{current_user.login}</div>" if current_user 
+    a = if current_user
+      "Hello #{current_user.login} #{link_to 'logout', session_url, :method => :delete}" 
+    else
+      link_to "Login", new_session_url
+    end
+    "<div class='login'>#{a}</div>" 
   end
 
 end
