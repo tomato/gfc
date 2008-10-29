@@ -1,0 +1,57 @@
+
+/* Edit Styles */
+form fieldset
+{
+  width:80%;
+  margin: 0.5em auto;
+  border-style: dashed;
+}
+
+form legend
+{
+  font-style:italic;
+  font-size:1.2em;
+}
+  
+
+form label
+{
+  float:left;
+  text-align:right;
+  width:40%;
+  margin-right:1em;
+}
+
+form label img
+{
+  float:left;
+  width:120px;
+  height:80px:
+}
+
+form p
+{
+  clear:left
+}
+
+form div.submission
+{
+  margin: 1em auto;
+  width:100px;
+}
+
+div.spacer
+{
+  clear:both;
+}
+
+textarea.summary
+{
+  height: 5em;
+}
+
+textarea.text
+{
+  height:10em;
+}
+

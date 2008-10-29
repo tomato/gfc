@@ -1,0 +1,76 @@
+
+/* Index Styles */
+div#selectionbox
+{
+  width:720px;
+  height:320px;
+  margin:20px;
+  margin: 0 auto;
+  position:relative;
+}
+
+div#selectionbox img
+{
+  margin:0px;
+  padding:0px;
+  border:0px;
+}
+
+div#selectionbox > div.SelectionImage
+{
+  z-index:2;
+  width:240px;
+  height:160px;
+  float:left;
+}
+
+div#selectionbox > div.SelectionText
+{
+  width:200px;
+  height:120px;
+  z-index:1;
+  padding:20px;
+  float:left;
+  text-align:center;
+}
+
+div#selectionbox > div.Cell1
+{
+  position:absolute;
+  top:0px;
+  left:0px;
+}
+
+div#selectionbox > div.Cell2
+{
+  position:absolute;
+  top:0px;
+  left:240px;
+}
+
+div#selectionbox > div.Cell3
+{
+  position:absolute;
+  top:0px;
+  left:480px;
+}
+
+div#selectionbox > div.Cell4
+{
+  position:absolute;
+  top:160px;
+  left:0px;
+}
+
+div#selectionbox > div.Cell5
+{
+  position:absolute;
+  top:160px;
+  left:240px;
+}
+div#selectionbox > div.Cell6
+{
+  position:absolute;
+  top:160px;
+  left:480px;
+}
