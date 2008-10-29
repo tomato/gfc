@@ -27,9 +27,6 @@ class ProductsController < ApplicationController
     if_save(:view){ @product.destroy}
   end
 
-  def index
-  end
-
   def show
     find_product
   end
