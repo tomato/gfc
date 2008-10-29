@@ -28,7 +28,6 @@ class ProductsController < ApplicationController
   end
 
   def index
-    find_products
   end
 
   def show
@@ -44,10 +43,6 @@ class ProductsController < ApplicationController
 
   def find_product
     @product = Product.find(params[:id])
-  end
-
-  def find_products
-    @products = Product.find(:all)
   end
 
   def if_save(action = :edit)
