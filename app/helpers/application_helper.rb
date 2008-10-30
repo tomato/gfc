@@ -18,4 +18,8 @@ module ApplicationHelper
     "<div class='login'>#{a}</div>" 
   end
 
+  def edit_link_to(*args)
+    if can_edit? then link_to *args end
+  end
+
 end

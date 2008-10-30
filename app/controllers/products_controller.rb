@@ -1,5 +1,4 @@
 class ProductsController < ApplicationController
-  helper_method :can_edit?
   before_filter :find_producer
   before_filter :login_required, :except => [:index, :show]
 
@@ -44,7 +43,7 @@ class ProductsController < ApplicationController
 
   def if_save(action = :edit)
     if(yield)
-       redirect_to producer_products_url(@producer)
+       redirect_to producer_url(@producer)
     else
       render action
     end

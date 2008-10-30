@@ -7,6 +7,8 @@
       =h(p.text)
 
 #rightcolumn
+  =edit_link_to 'New Product', new_producer_product_path(@producer) 
+  =edit_link_to 'Edit Producer', edit_producer_path(@producer) 
   #singlecolbox
     - @producer.products.each_with_index do |product,i|
       %div{:class => "SelectionImage #{grid(i)}"}
@@ -15,4 +17,3 @@
         %strong= product.name
         %br
         =product.description
-=link_to 'New', new_producer_product_path(@producer)
