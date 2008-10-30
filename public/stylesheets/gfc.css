@@ -65,81 +65,6 @@ div#main
   text-align: center;
 }
 
-/* Index Styles */
-div#selectionbox
-{
-  width:720px;
-  height:320px;
-  margin:20px;
-  margin: 0 auto;
-  position:relative;
-}
-
-div#selectionbox img
-{
-  margin:0px;
-  padding:0px;
-  border:0px;
-}
-
-div#selectionbox > div.SelectionImage
-{
-  z-index:2;
-  width:240px;
-  height:160px;
-  float:left;
-}
-
-div#selectionbox > div.SelectionText
-{
-  width:200px;
-  height:120px;
-  z-index:1;
-  padding:20px;
-  float:left;
-  text-align:center;
-}
-
-div#selectionbox > div.Cell1
-{
-  position:absolute;
-  top:0px;
-  left:0px;
-}
-
-div#selectionbox > div.Cell2
-{
-  position:absolute;
-  top:0px;
-  left:240px;
-}
-
-div#selectionbox > div.Cell3
-{
-  position:absolute;
-  top:0px;
-  left:480px;
-}
-
-div#selectionbox > div.Cell4
-{
-  position:absolute;
-  top:160px;
-  left:0px;
-}
-
-div#selectionbox > div.Cell5
-{
-  position:absolute;
-  top:160px;
-  left:240px;
-}
-div#selectionbox > div.Cell6
-{
-  position:absolute;
-  top:160px;
-  left:480px;
-}
 
 /* Show Styles */
 p.section1, p.section2
@@ -162,63 +87,19 @@ p.section2 img
   margin-left: 20px;
 }
 
-/* Edit Styles */
-form fieldset
-{
-  width:80%;
-  margin: 0.5em auto;
-  border-style: dashed;
-}
-
-form legend
-{
-  font-style:italic;
-  font-size:1.2em;
-}
-  
-
-form label
-{
-  float:left;
-  text-align:right;
-  width:40%;
-  margin-right:1em;
-}
-
-form label img
-{
-  float:left;
-  width:120px;
-  height:80px:
-}
-
-form p
-{
-  clear:left
-}
-
-form div.submission
-{
-  margin: 1em auto;
-  width:100px;
-}
-
-div.spacer
-{
-  clear:both;
-}
-
-textarea.summary
-{
-  height: 5em;
-}
-
-textarea.text
-{
-  height:10em;
-}
-
 div.login
 {
+  float:right;
+}
+
+div#leftcolumn
+{
+  width: 70%;
+  float:left;
+}
+
+div#rightcolumn
+{
+  width:30%;
   float:right;
 }
