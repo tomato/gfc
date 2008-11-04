@@ -5,3 +5,4 @@
   =h(@product.description)
 =edit_link_to 'Edit', edit_producer_product_path(@producer, @product)
 =edit_link_to 'Destroy', [@producer, @product], :confirm => 'Are you sure?', :method => :delete
+=edit_link_to 'Add Variant', new_producer_product_variant_path(@producer, @product)
