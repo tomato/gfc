@@ -3,4 +3,5 @@ class Product < ActiveRecord::Base
   
   belongs_to :producer
   has_one :image, :as => :section
+  has_many :variants
 end

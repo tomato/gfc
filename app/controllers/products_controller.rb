@@ -1,9 +1,8 @@
 class ProductsController < ApplicationController
-  before_filter :find_producer
+  before_filter :find_producer, :find_product
   before_filter :login_required, :except => [:index, :show]
 
   def new
-    @product = Product.new
     render :action => "edit"
   end
 
@@ -13,21 +12,17 @@ class ProductsController < ApplicationController
   end
 
   def edit
-    @product = Product.find(params[:id])
   end
 
   def update
-    find_product
     if_save {@product.update_attributes(params[:product])}
   end
 
   def destroy
-    find_product
-    if_save(:view){ @product.destroy}
+    if_save(:show){ @product.destroy}
   end
 
   def show
-    find_product
   end
 
   private
@@ -38,7 +33,7 @@ class ProductsController < ApplicationController
   end
 
   def find_product
-    @product = Product.find(params[:id])
+    @product = if params[:id] then Product.find(params[:id]) else Product.new end
   end
 
   def if_save(action = :edit)
