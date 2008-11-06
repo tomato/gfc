@@ -1,0 +1,15 @@
+- form_for [@producer, @product, @variant] , :html => { :multipart => true } do |form| 
+  = error_messages_for :variant 
+  %fieldset
+    %legend Different shapes and sizes?
+    %p
+      %label What do you call this variant? Big, 200g, Purple, Extra chocolaty?
+      = form.text_field :description
+    %p
+      %label How much are giving it away for?
+      = form.text_field :price, :size => "5" 
+    %p
+      %label Is it available now? 
+      = form.check_box :available
+    .spacer
+  .submission= submit_tag 
