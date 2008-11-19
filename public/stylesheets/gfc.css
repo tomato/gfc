@@ -50,6 +50,38 @@ div#top img
   float:left;
 }
 
+div#top ul
+{
+  display:inline;
+}
+
+div#top li
+{
+  display:inline;
+  border-right: 1px solid black;
+  list-style: none;
+}
+
+div#top li.first
+{
+  border-left: 1px solid black;
+}
+
+div#menu
+{
+  position: relative;
+  float:right;
+  height:100%;
+  top:100px;
+}
+
+div#menu a
+{
+  color:black;
+  letter-spacing: 0.1em;
+  word-spacing: 0.5em;
+}
+
 div#main
 {
   float:right;

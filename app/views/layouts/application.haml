@@ -7,6 +7,12 @@
   %body
     #top 
       =image_tag "gfclogo.jpg"
-      =login_label
+      #menu 
+        %ul
+          %li=login_label
+          %li=link_to 'producers', producers_path 
+          %li=link_to 'delivery', producers_path 
+          %li=link_to 'recipes', producers_path 
+          %li=link_to 'news', producers_path
     #main
       = yield :layout 

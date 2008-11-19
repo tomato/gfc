@@ -3,6 +3,12 @@
 %p{:class => flip_flop(0)} 
   =image_tag @product.image_path
   =h(@product.description)
+  %table
+    - @product.variants.each do |variant|
+      %tr
+        %td=variant.description
+        %td=variant.available
+        %td=variant.price
 =edit_link_to 'Edit', edit_producer_product_path(@producer, @product)
 =edit_link_to 'Destroy', [@producer, @product], :confirm => 'Are you sure?', :method => :delete
 =edit_link_to 'Add Variant', new_producer_product_variant_path(@producer, @product)

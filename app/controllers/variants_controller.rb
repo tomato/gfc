@@ -1,5 +1,5 @@
 class VariantsController < ApplicationController
-  before_filter :find_producer_and_product
+  before_filter :find_producer_and_product, :find_variant
   before_filter :login_required
 
   def new
