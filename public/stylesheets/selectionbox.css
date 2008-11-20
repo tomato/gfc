@@ -5,7 +5,9 @@ div#selectionbox
   width:720px;
   height:320px;
   margin: 0 auto;
-  position:relative;
+  position:absolute;
+  left:24%;
+  top:170px;
 }
 
 div#selectionbox img

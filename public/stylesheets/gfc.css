@@ -50,23 +50,6 @@ div#top img
   float:left;
 }
 
-div#top ul
-{
-  display:inline;
-}
-
-div#top li
-{
-  display:inline;
-  border-right: 1px solid black;
-  list-style: none;
-}
-
-div#top li.first
-{
-  border-left: 1px solid black;
-}
-
 div#menu
 {
   position: relative;
@@ -82,13 +65,30 @@ div#menu a
   word-spacing: 0.5em;
 }
 
+div#menu ul
+{
+  display:inline;
+}
+
+div#menu li
+{
+  display:inline;
+  border-right: 1px solid black;
+  list-style: none;
+  padding:1px 5px;
+}
+
 div#main
 {
-  float:right;
   width:100%;
-  height:100%;
-  border-style: solid none;
-  padding:20px;
+  border-top-style: solid;
+}
+
+div#leftbar
+{
+  width:22%;
+  float:left;
+  padding:15px;
 }
 
 .Flash
