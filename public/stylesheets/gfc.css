@@ -20,6 +20,7 @@ h2
 {
   text-align:center;
   margin:10px;
+  font-size:1.7em;
   color:#667638;
   font-family:Georgia, Times;
   font-style: normal;
@@ -89,6 +90,12 @@ div#leftbar
   width:22%;
   float:left;
   padding:15px;
+}
+
+div.central
+{
+  margin:10px auto ;
+  width:70%;
 }
 
 .Flash
