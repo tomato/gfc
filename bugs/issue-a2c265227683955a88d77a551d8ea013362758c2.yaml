@@ -1,0 +1,18 @@
+--- !ditz.rubyforge.org,2008-03-06/issue 
+title: Add ingredients to recipe
+desc: Display as list. Attributes - Ingredient:string, amount:string
+type: :feature
+component: gfc
+release: 
+reporter: Tom <tom@tomhowlett.com>
+status: :unstarted
+disposition: 
+creation_time: 2008-11-24 07:57:30.850640 Z
+references: []
+
+id: a2c265227683955a88d77a551d8ea013362758c2
+log_events: 
+- - 2008-11-24 07:57:32.695219 Z
+  - Tom <tom@tomhowlett.com>
+  - created
+  - ""
