@@ -1,0 +1,17 @@
+- form_for @recipe, :html => { :multipart => true } do |form|
+  = error_messages_for :recipe
+  %fieldset
+    %legend Recipe?
+    %p
+      %label Name
+      = form.text_field :name
+    %p
+      %label Procedure
+      =form.text_area :description #This could be replaced by a rich text area
+    %p
+      %label
+        = image_tag @recipe.image_path if @recipe.image 
+        Upload an image of the recipe
+      = form.file_field :uploaded_data 
+    .spacer
+  .submission= submit_tag 

@@ -1,0 +1,14 @@
+%h1 Recipes
+#leftcolumn
+  %h2= @recipe.name
+  %p{:class => flip_flop(0) }
+    =image_tag @recipe.image_path
+    =h(@recipe.description)
+    =edit_link_to "Edit", edit_recipe_path(@recipe)
+    =edit_link_to 'Destroy',@recipe , :confirm => 'Are you sure?', :method => :delete
+    =edit_link_to 'New', new_recipe_path
+#rightcolumn
+  %h2 Previous Recipes
+  %ul
+    - @recipes.each do |r| 
+      %li=link_to r.name, recipe_path(r)  
