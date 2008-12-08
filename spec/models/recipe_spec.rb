@@ -5,7 +5,13 @@ describe Recipe do
     @recipe = Recipe.new
   end
 
-  it "should be valid" do
+  it "should not be valid" do
+    @recipe.should_not be_valid
+  end
+
+  it "should be valid with a name and description" do
+    @recipe.name = "tom"
+    @recipe.description = "blah blah blah"
     @recipe.should be_valid
   end
 end

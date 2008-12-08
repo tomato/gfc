@@ -37,4 +37,10 @@ Factory.define :tom_thumb, :class => :user do |u|
   u.email 'tom@tomhowlett.com'
 end
 
+Factory.define :product do |p|
+  p.name 'Mackeral'
+  p.description 'Tasty fish for the penguins'
+  p.producer { |producer| producer.association(:producer) }
+end 
+
 

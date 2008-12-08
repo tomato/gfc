@@ -8,7 +8,7 @@
     =edit_link_to 'Destroy',@recipe , :confirm => 'Are you sure?', :method => :delete
     =edit_link_to 'New', new_recipe_path
 #rightcolumn
-  %h2 Previous Recipes
+  %h3 Previous Recipes
   %ul
     - @recipes.each do |r| 
       %li=link_to r.name, recipe_path(r)  

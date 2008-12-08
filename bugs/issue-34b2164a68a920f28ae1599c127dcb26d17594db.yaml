@@ -1,0 +1,23 @@
+--- !ditz.rubyforge.org,2008-03-06/issue 
+title: Basket
+desc: |-
+  the basket should not be presisted for a user
+  the basket should contain productid, quantity
+  methods add(product, *quantity)
+  remove(product)
+  update_quantity(product, quantity)
+type: :feature
+component: gfc
+release: 
+reporter: Tom <tom@tomhowlett.com>
+status: :unstarted
+disposition: 
+creation_time: 2008-12-04 07:59:12.576348 Z
+references: []
+
+id: 34b2164a68a920f28ae1599c127dcb26d17594db
+log_events: 
+- - 2008-12-04 07:59:15.943161 Z
+  - Tom <tom@tomhowlett.com>
+  - created
+  - ""
