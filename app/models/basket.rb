@@ -4,6 +4,7 @@ class Basket
 
   def initialize
     @items = {}
+    add_validator
   end
 
   def total_quantity
@@ -13,19 +14,10 @@ class Basket
   end
 
   def add(product, quantity=1)
-    if(Product.exists?(product))
-      if(@items[product.id])
-        @items[product.id] += quantity
-      else
-        @items[product.id] = quantity
-      end
-      if(@items[product.id] < 0)
-       @items[product.id] -= quantity
-       raise ArgumentError, "Quantity cannot be negative", caller 
-      end
-      if(@items[product.id] == 0)
-        @items.delete product.id
-      end
+    if(@items[product.id])
+      @items[product.id] += quantity
+    else
+      @items[product.id] = quantity
     end
   end
 
@@ -34,10 +26,26 @@ class Basket
   end
 
   def update_quantity(product, quantity)
-    if(@items.has_key?(product.id) && quantity > 0)
+    if(@items.has_key?(product.id))
       @items[product.id] = quantity
     else
-      raise ArgumentException, "Product Not Found or quantity negative", caller
+      raise ArgumentException, "Product Not Found ", caller
+    end
+  end
+
+  private
+
+  def add_validator
+    @items.instance_eval do
+      def []=(key, value)
+        if(value < 0)
+          raise ArgumentError, "Quantity cannot be negative", caller 
+        elsif(value == 0)
+          self.delete key
+        elsif(Product.exists?(key))
+          super
+        end
+      end
     end
   end
 
