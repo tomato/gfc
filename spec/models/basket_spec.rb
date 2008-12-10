@@ -13,7 +13,7 @@ describe Basket do
   end
 
   it "should not add a non persisted product" do
-    @basket.add Product.new
+    lambda{ @basket.add Product.new}.should raise_error
     @basket.total_quantity.should eql(0)
   end
 
@@ -43,10 +43,6 @@ describe Basket do
     @basket.add @p
     @basket.update_quantity @p, 2
     @basket.total_quantity.should eql(2)
-  end
-
-  it "should raise error it quantity is updated of product in the basket" do
-    lambda{ @basket.update_quantity @p, 2}.should raise_error
   end
 
   it "should raise error if quantity is set to negative when updating quantity" do

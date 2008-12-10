@@ -8,9 +8,7 @@ class Basket
   end
 
   def total_quantity
-    total_quantity = 0
-    items.each{|key,value| total_quantity += value}
-    total_quantity
+    items.to_a.inject(0){|total, element| total += element.last}
   end
 
   def add(product, quantity=1)
@@ -26,11 +24,7 @@ class Basket
   end
 
   def update_quantity(product, quantity)
-    if(@items.has_key?(product.id))
-      @items[product.id] = quantity
-    else
-      raise ArgumentException, "Product Not Found ", caller
-    end
+    @items[product.id] = quantity
   end
 
   private
@@ -44,6 +38,8 @@ class Basket
           self.delete key
         elsif(Product.exists?(key))
           super
+        else
+          raise ArgumentError, "Product Not Found ", caller
         end
       end
     end
