@@ -3,7 +3,8 @@
   %head
     %title Passion before profit....
     = stylesheet_link_tag :all
-    = javascript_include_tag "jquery", "browse" 
+    = javascript_include_tag :defaults
+    = #javascript_include_tag "jquery", "browse" 
   %body
     #top 
       =image_tag "gfclogo.jpg"
@@ -14,5 +15,6 @@
           %li=link_to 'recipes', recipes_path 
           %li=link_to 'news', producers_path
           %li=login_label
+          %li=render_partial 'baskets/basket', @basket
     #main
       = yield :layout 

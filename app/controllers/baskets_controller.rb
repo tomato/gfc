@@ -1,10 +1,19 @@
 class BasketsController < ApplicationController
-  before_filter :get_basket
 
+  def index
 
+  end
 
-  private 
-  def get_basket
-    @basket = session[:basket] ||= Basket.new
+  def create
+
+  end
+
+  def add_to_basket
+    @basket.add(params[:product_id], params[:quantity])
+    respond_to {|f| f.js}
+  end
+
+  def destroy
+
   end
 end

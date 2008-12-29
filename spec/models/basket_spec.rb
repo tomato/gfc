@@ -22,6 +22,23 @@ describe Basket do
     @basket.total_quantity.should eql(2)
   end
 
+  it "should add a specific string quantity to a basket" do
+    puts @p.id
+    @basket.add @p, "2"
+    @basket.total_quantity.should eql(2)
+  end
+
+  it "should accept an int for a product key" do
+    @basket.add @p.id, 2
+    @basket.total_quantity.should eql(2)
+  end
+
+  it "should accept a string for a product key" do
+    @basket.add @p.id.to_s, 2
+    @basket.total_quantity.should eql(2)
+  end
+
+
   it "should remove a specifc quantity from a basket item" do
     @basket.add @p, 3
     @basket.remove @p, 1

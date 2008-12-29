@@ -4,7 +4,17 @@ class Basket
 
   def initialize
     @items = {}
-    add_validator
+    add_validator @items
+  end
+  
+  def marshal_dump
+    h = {}
+    h.merge @items
+  end
+
+  def marshal_load(variables)
+    initialize
+    @items.merge! Hash.new(variables)
   end
 
   def total_quantity
@@ -12,10 +22,10 @@ class Basket
   end
 
   def add(product, quantity=1)
-    if(@items[product.id])
-      @items[product.id] += quantity
+    if(@items[product])
+      @items[product] += quantity
     else
-      @items[product.id] = quantity
+      @items[product] = quantity
     end
   end
 
@@ -29,18 +39,24 @@ class Basket
 
   private
 
-  def add_validator
-    @items.instance_eval do
+  def add_validator(hash)
+    hash.instance_eval do
       def []=(key, value)
-        if(value < 0)
+        k = (key.kind_of? ActiveRecord::Base) ? key.id : key.to_i
+        v = value.to_i
+        if(v < 0)
           raise ArgumentError, "Quantity cannot be negative", caller 
-        elsif(value == 0)
-          self.delete key
-        elsif(Product.exists?(key))
-          super
+        elsif(v == 0)
+          self.delete k
+        elsif(Product.exists?(k))
+          super k, v
         else
           raise ArgumentError, "Product Not Found ", caller
         end
+      end
+      def [](key)
+        k = (key.kind_of? ActiveRecord::Base) ? key.id : key.to_i
+        super k
       end
     end
   end

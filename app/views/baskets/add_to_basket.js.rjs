@@ -1,0 +1,1 @@
+page.replace_html "basket", :partial => "basket", :object => @basket
