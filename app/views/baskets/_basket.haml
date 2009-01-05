@@ -1,3 +1,1 @@
-#basket
-  - @basket.items.each do |i|
-    %p=i.to_s
+%span#basket=link_to "basket (#{@basket.total_quantity} items)", baskets_path
