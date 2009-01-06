@@ -8,13 +8,12 @@ class Basket
   end
   
   def marshal_dump
-    h = {}
-    h.merge @items
+    {}.merge @items
   end
 
   def marshal_load(variables)
     initialize
-    @items.merge! Hash.new(variables)
+    @items.merge! variables
   end
 
   def total_quantity
@@ -23,14 +22,14 @@ class Basket
 
   def add(product, quantity=1)
     if(@items[product])
-      @items[product] += quantity
+      @items[product] += quantity.to_i
     else
       @items[product] = quantity
     end
   end
 
   def remove(product, quantity=1)
-    add(product, quantity*-1)
+    add(product, quantity.to_i*-1)
   end
 
   def update_quantity(product, quantity)

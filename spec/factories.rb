@@ -4,6 +4,10 @@ Factory.sequence :producer_name do |n|
   "Producer #{n}"
 end
 
+Factory.sequence :product_name do |n|
+  "Product #{n}"
+end
+
 Factory.define :producer do |f|
   f.address  "
     The village hall
@@ -38,9 +42,7 @@ Factory.define :tom_thumb, :class => :user do |u|
 end
 
 Factory.define :product do |p|
-  p.name 'Mackeral'
+  p.name Factory.next :product_name
   p.description 'Tasty fish for the penguins'
-  p.producer { |producer| producer.association(:producer) }
+  p.producer {|r| r.association(:producer, :name => Factory.next(:producer_name))}
 end 
-
-

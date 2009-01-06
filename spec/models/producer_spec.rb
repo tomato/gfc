@@ -30,7 +30,7 @@ describe Producer do
     p = Factory(:producer)
     p = p.clone
     p.should_not be_valid
-    p.errors[:name].should include "has already been taken"
+    p.errors[:name].should include "Producer name already used"
   end
 
   it "should error if email is not valid" do
