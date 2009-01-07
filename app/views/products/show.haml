@@ -12,7 +12,7 @@
         %td
           -form_remote_tag :url => {:controller => 'baskets', :action => 'add_to_basket'} do
             = hidden_field_tag :variant_id, variant.id
-            = text_field_tag :quantity, 1
+            = text_field_tag :quantity, 1, :size => 2
             =submit_tag 'Add to basket'
 =edit_link_to 'Edit', edit_producer_product_path(@producer, @product)
 =edit_link_to 'Destroy', [@producer, @product], :confirm => 'Are you sure?', :method => :delete
