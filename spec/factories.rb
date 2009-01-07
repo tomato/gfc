@@ -46,3 +46,10 @@ Factory.define :product do |p|
   p.description 'Tasty fish for the penguins'
   p.producer {|r| r.association(:producer, :name => Factory.next(:producer_name))}
 end 
+
+Factory.define :variant do |v|
+  v.description 'big one'
+  v.price '23'
+  v.available true
+  v.product {|p| p.association(:product, :name => Factory.next(:product_name))}
+end

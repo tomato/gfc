@@ -9,7 +9,7 @@ class BasketsController < ApplicationController
   end
 
   def add_to_basket
-    @basket.add(params[:product_id], params[:quantity])
+    @basket.add(params[:variant_id], params[:quantity])
     respond_to {|f| f.js}
   end
 

@@ -20,20 +20,20 @@ class Basket
     items.to_a.inject(0){|total, element| total += element.last}
   end
 
-  def add(product, quantity=1)
-    if(@items[product])
-      @items[product] += quantity.to_i
+  def add(variant, quantity=1)
+    if(@items[variant])
+      @items[variant] += quantity.to_i
     else
-      @items[product] = quantity
+      @items[variant] = quantity
     end
   end
 
-  def remove(product, quantity=1)
-    add(product, quantity.to_i*-1)
+  def remove(variant, quantity=1)
+    add(variant, quantity.to_i*-1)
   end
 
-  def update_quantity(product, quantity)
-    @items[product.id] = quantity
+  def update_quantity(variant, quantity)
+    @items[variant.id] = quantity
   end
 
   private
@@ -47,7 +47,7 @@ class Basket
           raise ArgumentError, "Quantity cannot be negative", caller 
         elsif(v == 0)
           self.delete k
-        elsif(Product.exists?(k))
+        elsif(Variant.exists?(k))
           super k, v
         else
           raise ArgumentError, "Product Not Found ", caller

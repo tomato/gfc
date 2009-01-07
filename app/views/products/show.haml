@@ -11,7 +11,7 @@
         %td=variant.price
         %td
           -form_remote_tag :url => {:controller => 'baskets', :action => 'add_to_basket'} do
-            = hidden_field_tag :product_id, @product.id
+            = hidden_field_tag :variant_id, variant.id
             = text_field_tag :quantity, 1
             =submit_tag 'Add to basket'
 =edit_link_to 'Edit', edit_producer_product_path(@producer, @product)
