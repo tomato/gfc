@@ -11,7 +11,7 @@ module ApplicationHelper
 
   def login_label
     if current_user
-      "Hello #{current_user.login} #{link_to 'logout', session_url, :method => :delete}" 
+      link_to "logout #{current_user.login}", session_url, :method => :delete
     else
       link_to "Login", new_session_url
     end
