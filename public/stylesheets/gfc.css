@@ -151,3 +151,8 @@ th
 {
   text-align:left;
 }
+
+td.right, th.right
+{
+  text-align:right;
+}

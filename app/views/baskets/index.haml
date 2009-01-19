@@ -3,16 +3,17 @@
   %table#basket
     %tr
       %th Description
-      %th Quantity
-      %th Price
-      %th Remove
+      %th.right Quantity
+      %th.right Price
     -@basket_detail.items.each do |bi|
       %tr
         %td=bi.product.name + " - " + bi.variant.description
-        %td
+        %td.right
           -form_remote_tag :url => {:controller => 'baskets', :action => 'edit_basket'} do
             = hidden_field_tag :variant_id, bi.variant.id
-            = text_field_tag :quantity, bi.quantity, :size => 2
-            =submit_tag 'Edit'
-        %td=bi.variant.price
-        %td remove
+            = text_field_tag :quantity, bi.quantity, :size => 2, :onblur => "$(parent).submit();"
+        %td.right=bi.variant.price
+    %tr
+      %td
+      %td.right#tq=@basket_detail.total_quantity
+      %td.right#tp=@basket_detail.total_price

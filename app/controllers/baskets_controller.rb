@@ -11,6 +11,7 @@ class BasketsController < ApplicationController
 
   def edit_basket
     @basket.update_quantity(params[:variant_id], params[:quantity])
+    @basket_detail = BasketDetail.new @basket
     respond_to {|f| f.js}
   end
 
