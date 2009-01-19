@@ -1,0 +1,5 @@
+page.replace_html "basket", :partial => "basket", :object => @basket
+page[:basket].visual_effect :highlight,
+                                    :startcolor => "#88ff88" ,
+                                    :endcolor => "#114411"
+

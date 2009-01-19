@@ -45,6 +45,12 @@ describe Basket do
     @basket.total_quantity.should eql(2)
   end
 
+  it "should accept an int for a variant key when updating quantity" do
+    @basket.add @v.id, 2
+    @basket.update_quantity @v.id, 7
+    @basket.total_quantity.should eql(7)
+  end
+
   it "should accept a string for a variant key" do
     @basket.add @v.id.to_s, 2
     @basket.total_quantity.should eql(2)
@@ -85,6 +91,16 @@ describe Basket do
     @basket.items.should_not have_key @v.id
   end
 
+  it "should retrieve an item by id" do
+    @basket.add @v
+    @basket.items[@v.id] = 1
+  end
+
+  it "should retrieve an item by object" do
+    @basket.add @v
+    @basket.items[@v] = 1
+  end 
+
   it "should be marshallable" do
     @basket.add @v
     data = Marshal.dump @basket
@@ -92,4 +108,5 @@ describe Basket do
     b2.should be_kind_of Basket
     b2.total_quantity.should eql(1)
   end
+
 end

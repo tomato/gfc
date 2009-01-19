@@ -33,7 +33,7 @@ class Basket
   end
 
   def update_quantity(variant, quantity)
-    @items[variant.id] = quantity
+    @items[variant] = quantity
   end
 
   private
@@ -50,7 +50,7 @@ class Basket
         elsif(Variant.exists?(k))
           super k, v
         else
-          raise ArgumentError, "Product Not Found ", caller
+          raise ArgumentError, "Product Variant Not Found ", caller
         end
       end
       def [](key)

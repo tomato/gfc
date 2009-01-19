@@ -141,3 +141,13 @@ div#rightcolumn
   width:30%;
   float:right;
 }
+
+table#basket
+{
+  width:100%;
+}
+
+th
+{
+  text-align:left;
+}

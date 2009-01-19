@@ -1,11 +1,7 @@
 class BasketsController < ApplicationController
 
   def index
-
-  end
-
-  def create
-
+    @basket_detail = BasketDetail.new @basket
   end
 
   def add_to_basket
@@ -13,7 +9,9 @@ class BasketsController < ApplicationController
     respond_to {|f| f.js}
   end
 
-  def destroy
-
+  def edit_basket
+    @basket.update_quantity(params[:variant_id], params[:quantity])
+    respond_to {|f| f.js}
   end
+
 end

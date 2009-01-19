@@ -1,0 +1,18 @@
+.central
+  %h1 Basket
+  %table#basket
+    %tr
+      %th Description
+      %th Quantity
+      %th Price
+      %th Remove
+    -@basket_detail.items.each do |bi|
+      %tr
+        %td=bi.product.name + " - " + bi.variant.description
+        %td
+          -form_remote_tag :url => {:controller => 'baskets', :action => 'edit_basket'} do
+            = hidden_field_tag :variant_id, bi.variant.id
+            = text_field_tag :quantity, bi.quantity, :size => 2
+            =submit_tag 'Edit'
+        %td=bi.variant.price
+        %td remove
