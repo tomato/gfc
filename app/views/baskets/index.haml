@@ -1,4 +1,4 @@
--form_remote_tag :url => {:controller => 'baskets', :action => 'edit_basket'} do
+-form_tag('void(0)',:id =>:edit_basket) do
   .central
     %h1 Basket
     %table#basket
@@ -16,4 +16,5 @@
         %td
         %td.right#tq=@basket_detail.total_quantity
         %td.right#tp=@basket_detail.total_price
-    =submit_tag 'edit'
+    =observe_form :edit_basket, :url => {:controller => 'baskets', :action => 'edit_basket'}, :frequency => 0.5
+                  
