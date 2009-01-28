@@ -1,19 +1,19 @@
-.central
-  %h1 Basket
-  %table#basket
-    %tr
-      %th Description
-      %th.right Quantity
-      %th.right Price
-    -@basket_detail.items.each do |bi|
+-form_remote_tag :url => {:controller => 'baskets', :action => 'edit_basket'} do
+  .central
+    %h1 Basket
+    %table#basket
       %tr
-        %td=bi.product.name + " - " + bi.variant.description
-        %td.right
-          -form_remote_tag :url => {:controller => 'baskets', :action => 'edit_basket'} do
-            = hidden_field_tag :variant_id, bi.variant.id
-            = text_field_tag :quantity, bi.quantity, :size => 2, :onblur => "$(parent).submit();"
-        %td.right=bi.variant.price
-    %tr
-      %td
-      %td.right#tq=@basket_detail.total_quantity
-      %td.right#tp=@basket_detail.total_price
+        %th Description
+        %th.right Quantity
+        %th.right Price
+      -@basket_detail.items.each do |bi|
+        -fields_for bi, :index => bi.variant.id do |itm|
+          %tr
+            %td=bi.product.name + " - " + bi.variant.description
+            %td.right=itm.text_field :quantity, :size => 2
+            %td.right=bi.variant.price
+      %tr
+        %td
+        %td.right#tq=@basket_detail.total_quantity
+        %td.right#tp=@basket_detail.total_price
+    =submit_tag 'edit'

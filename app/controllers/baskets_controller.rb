@@ -10,7 +10,10 @@ class BasketsController < ApplicationController
   end
 
   def edit_basket
-    @basket.update_quantity(params[:variant_id], params[:quantity])
+    params[:basket_item].each do |key,value|
+      @basket.update_quantity(key, value[:quantity])
+    end
+
     @basket_detail = BasketDetail.new @basket
     respond_to {|f| f.js}
   end
