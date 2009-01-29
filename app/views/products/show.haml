@@ -7,7 +7,7 @@
     - @product.variants.each do |variant|
       %tr
         %td=variant.description
-        %td="£%6.2f" % variant.price
+        %td=format_price(variant.price)
         -if(variant.available) then 
           %td
             -form_remote_tag :url => {:controller => 'baskets', :action => 'add_to_basket'} do

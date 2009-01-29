@@ -21,4 +21,8 @@ module ApplicationHelper
     if can_edit? then link_to *args end
   end
 
+  def format_price(price)
+    "£%6.2f" % price
+  end
+
 end

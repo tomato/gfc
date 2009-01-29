@@ -11,10 +11,10 @@
           %tr
             %td=bi.product.name + " - " + bi.variant.description
             %td.right=itm.text_field :quantity, :size => 2
-            %td.right=bi.variant.price
+            %td.right=format_price(bi.variant.price)
       %tr
         %td
-        %td.right#tq=@basket_detail.total_quantity
-        %td.right#tp=@basket_detail.total_price
-    =observe_form :edit_basket, :url => {:controller => 'baskets', :action => 'edit_basket'}, :frequency => 0.5
+        %td.total#tq=@basket_detail.total_quantity
+        %td.total#tp=format_price(@basket_detail.total_price)
+    =observe_form :edit_basket, :url => {:controller => 'baskets', :action => 'edit_basket'}, :frequency => 0.25
                   
