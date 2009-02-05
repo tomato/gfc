@@ -1,4 +1,5 @@
 
+=link_to "More from #{@producer.name}", producer_path(@producer)
 %h2= @product.name
 %p{:class => flip_flop(0)} 
   =image_tag @product.image_path
