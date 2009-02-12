@@ -17,4 +17,4 @@
         %td.total#tq=@basket_detail.total_quantity
         %td.total#tp=format_price(@basket_detail.total_price)
     =observe_form :edit_basket, :url => {:controller => 'baskets', :action => 'edit_basket'}, :frequency => 0.25
-                  
+    =link_to 'Place An Order', producers_path, :style => 'float:right;'                  

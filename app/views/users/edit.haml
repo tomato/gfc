@@ -1,0 +1,32 @@
+.central
+  %h1 Join Us!
+  -form_for @user do |form|
+    =error_messages_for :user
+    %fieldset
+      %legend Who are you?
+      %p
+        %label Name
+
+    %fieldset 
+      %legend How can we contact you?  
+      %p
+        %label Email
+        = form.text_field :email
+      %p
+        %label Telephone
+    %fieldset
+      %legend Where would you like your deliveries? You can tell us when later
+      %p
+        Address selector here add validation if we can't deliver there
+    %fieldset
+      %legend Shhhh! whisper your password!
+      %p
+        %label Password
+        =form.password_field :password
+      %p
+        %label Password again (just to make sure)
+        =form.password_field :password_confirmation
+    %fieldset
+      %legend Paying us
+      %p We like riding bikes and eating great food not accounting so to keep things simple we use PayPal for payments. If you haven't got an account you can just pay with your card (through PayPal) if you have its all very quick and you don't have to trust us with your darkest secrets.
+    =submit_tag

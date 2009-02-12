@@ -18,12 +18,12 @@ describe UsersController do
 
   
 
-  it 'requires login on signup' do
+  it 'does not require login on signup email is used' do
     lambda do
       create_user(:login => nil)
-      assigns[:user].errors.on(:login).should_not be_nil
-      response.should be_success
-    end.should_not change(User, :count)
+      assigns[:user].errors.on(:login).should be_nil
+      response.should be_redirect
+    end.should change(User, :count)
   end
   
   it 'requires password on signup' do

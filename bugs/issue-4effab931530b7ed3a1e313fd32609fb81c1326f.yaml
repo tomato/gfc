@@ -1,0 +1,32 @@
+--- !ditz.rubyforge.org,2008-03-06/issue 
+title: A user should be able to request a basket
+desc: |-
+  User should be able to specify where he wants it delivered
+  User should be able to specify when he wnats it delivered
+  user should be able to pay for the the basket
+  User should recieve confirmation of the order
+  User should not have to re-enter the details everytime they make an order
+type: :feature
+component: gfc
+release: 
+reporter: Tom <tom@tomhowlett.com>
+status: :unstarted
+disposition: 
+creation_time: 2009-02-09 08:36:11.789803 Z
+references: []
+
+id: 4effab931530b7ed3a1e313fd32609fb81c1326f
+log_events: 
+- - 2009-02-09 08:44:08.647535 Z
+  - Tom <tom@tomhowlett.com>
+  - created
+  - |-
+    Steps
+    Click on "basket button"
+    Presented with "Got an account - Login"
+    ortherwise your going to have to give us a few details about where you want the delivery
+    create username
+    delivery address
+    create password
+    
+    When can we deliver

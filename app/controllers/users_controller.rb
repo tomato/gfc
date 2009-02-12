@@ -5,6 +5,8 @@ class UsersController < ApplicationController
 
   # render new.rhtml
   def new
+    @user = User.new
+    render :action => "edit"
   end
 
   def create
@@ -13,7 +15,7 @@ class UsersController < ApplicationController
     # request forgery protection.
     # uncomment at your own risk
     # reset_session
-    @user = User.new(params[:user])
+    @user = User.new(params[:user].merge(:login => params[:user][:email]))
     @user.save
     if @user.errors.empty?
       self.current_user = @user
@@ -24,4 +26,7 @@ class UsersController < ApplicationController
     end
   end
 
+  def edit
+    @user = User.find(params[:id])
+  end
 end
