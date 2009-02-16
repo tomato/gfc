@@ -17,4 +17,8 @@
         %td.total#tq=@basket_detail.total_quantity
         %td.total#tp=format_price(@basket_detail.total_price)
     =observe_form :edit_basket, :url => {:controller => 'baskets', :action => 'edit_basket'}, :frequency => 0.25
-    =link_to 'Place An Order', producers_path, :style => 'float:right;'                  
+    -if current_user
+      =link_to 'Place An Order', producers_path, :style => 'float:right;'                  
+    -else
+      %span{:style => 'float:right;'}
+        =link_to('Login', new_session_path) + ' or ' + link_to('Register', new_user_path)

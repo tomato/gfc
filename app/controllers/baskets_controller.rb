@@ -2,6 +2,7 @@ class BasketsController < ApplicationController
 
   def index
     @basket_detail = BasketDetail.new @basket
+    session[:return_to] = baskets_path 
   end
 
   def add_to_basket
