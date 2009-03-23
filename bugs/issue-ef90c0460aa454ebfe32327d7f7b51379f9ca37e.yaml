@@ -1,0 +1,31 @@
+--- !ditz.rubyforge.org,2008-03-06/issue 
+title: A user should be able to specify a delivery date and time
+desc: |-
+  Where: THe default address should be their registered address but they may want to specify an alternative
+  When: Users can pick an hourly time slots, 
+  Admin should be able to view when a where orders are to be delivered
+  Admin should be able to close a delivery spot
+  Admin should be able to restrict the number of orders in a dleivery spot - User can only have one delivery - once delivery is linked to an order it is removed from delivery table
+type: :feature
+component: gfc
+release: 
+reporter: Tom <tom@tomhowlett.com>
+status: :unstarted
+disposition: 
+creation_time: 2009-02-19 08:30:55.116232 Z
+references: []
+
+id: ef90c0460aa454ebfe32327d7f7b51379f9ca37e
+log_events: 
+- - 2009-02-19 08:31:02.094275 Z
+  - Tom <tom@tomhowlett.com>
+  - created
+  - ""
+- - 2009-03-10 08:19:34.529398 Z
+  - Tom <tom@tomhowlett.com>
+  - changed description
+  - ""
+- - 2009-03-10 08:20:29.297218 Z
+  - Tom <tom@tomhowlett.com>
+  - changed description
+  - ""

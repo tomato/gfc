@@ -1,0 +1,17 @@
+.cerntral
+  -form_for @delivery do |f|
+    =error_messages_for :delivery
+    %fieldset
+      %legend Arrange a delivery
+      %p
+        %label When?
+      %p
+        =f.datetime_select :when, :start_date => 2.days.from_now, :discard_minute => true, :start_hour => 7, :finish_hour => 9
+      %table
+        -%w{Monday Tuesday Wednesday Thursday Friday Saturday Sunday}.each do |day| 
+          %tr
+            %td=day
+            -(7...23).each do |t|
+              %td=t
+
+    .submission= submit_tag 
