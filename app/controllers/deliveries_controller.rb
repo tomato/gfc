@@ -1,5 +1,6 @@
 class DeliveriesController < ApplicationController
   before_filter :login_required, :except => :index
+  helper_method :all
 
   def new
     @delivery = Delivery.new
