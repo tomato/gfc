@@ -6,8 +6,8 @@ class DeliveriesController < ApplicationController
     @delivery = Delivery.new
   end
 
-  def create
-    d = Delivery.new({:when => params[:delivery][:when], :user_id => current_user.id})
+  def set
+    d = Delivery.new({:when => Time.at(params[:id].to_i), :user_id => current_user.id})
     if(d.save)
       flash[:notice] = 'You delivery has been reserved'
       render :action => :index

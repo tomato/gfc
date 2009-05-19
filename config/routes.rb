@@ -1,7 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
 
   map.resource :session
-  map.resources :images, :users, :deliveries, :recipes, :baskets
+  map.resources :images, :users, :recipes, :baskets
+  map.resources :deliveries, :member => { :set => :get }
   map.resources :producers do |producer|
     producer.resources :products do |product|
       product.resources :variants

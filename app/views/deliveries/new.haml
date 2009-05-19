@@ -5,13 +5,11 @@
       %legend Arrange a delivery
       %p
         %label When?
-      %p
-        =f.datetime_select :when, :start_date => 2.days.from_now, :discard_minute => true, :start_hour => 7, :finish_hour => 9
       %table
         -next_delivery_days(Time.now,10).each do |day| 
           %tr
             %td=day.strftime("%A %d %b")
-            -(7...23).each do |t|
-              %td=t
-
+            -(daily_delivery_slots).each do |t|
+              -dt = Time.gm day.year, day.month, day.day, t
+              %td=link_to "%02d:00" % t, set_delivery_url(dt.to_i.to_s)
     .submission= submit_tag 

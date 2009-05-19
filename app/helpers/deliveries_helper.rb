@@ -15,7 +15,7 @@ module DeliveriesHelper
   end
 
   def daily_delivery_slots
-    7..22
+    7..20
   end
 
 end

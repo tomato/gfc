@@ -1,7 +1,7 @@
 class CreateDeliveries < ActiveRecord::Migration
   def self.up
     create_table :deliveries do |t|
-      t.time :when
+      t.datetime :when
       t.timestamps
       t.references :user, :null => false
     end
